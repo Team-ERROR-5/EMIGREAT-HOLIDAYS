@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Tourism</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+  <body>
+    <header>
+      <div class="container">
+        <input type="checkbox" name="check" id="check">
+      <div class="nav-link" style="margin-top: 10px;">
+          <img src="https://i.ibb.co/dbNpM4n/travel-1.gif" alt="travel-1" style="margin-right: 60px;" width="40px" height="40px" >
+        </div>
+        <div class="logo-container" >
+          <h3 class="logo">EMIGREAT <span>HOLIDAYS</span></h3>
+        </div>
+        <div class="nav-btn">
+          <div class="nav-links">
+            <ul id="op">
+              <li class="nav-link" style="--i: .6s">
+                <a href="#Home"><i class="fa-solid fa-house-circle-check"></i>Home</a>
+              </li>
+              <li class="nav-link" style="--i: .85s">
+                <a href="./login.html"><i class="fa-solid fa-bars"></i>Menu<i class="fas fa-caret-down"></i></a>
+                
+              <li class="nav-link" style="--i: 1.1s">
+                <a href="./contact.html"><i class="fa-solid fa-users-gear"></i>Contact<i class="fas fa-caret-down"></i></a>
+                
+              <li class="nav-link" style="--i: 1.35s">
+                <a href="./about.html"><i class="fa-regular fa-address-card"></i> About</a>
+              </li>
+            </ul>
+          </ul>
+          </div>
+          <div class="log-sign" style="--i: 1.8s">
+            <a href="./book now.html" class="btn transparent"><i class="fa-solid fa-angles-right"></i>  Book Now</a>
+            
+          
+          </div>
+        </div>
+  
+        <div class="hamburger-menu-container">
+          <div class="hamburger-menu">
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="overlay"></div>
+      </section>
+
+
+      <section class="national-parks-top" id="Home" >
+        <a href="https://www.govx.com/c/1900/camping-hiking" alt="camping and hiking">
+                <div class="cb-slideshow" style="height: 670px;">
+      
+                  <!--
+                  <img  alt="hp-national-parks-badge-081816" src="https://i2.govx.io/images/cdn/hp-national-parks-badge-081816.svg" />
+                  -->
+      
+                  <img class="nat-park-badge" alt="text-png-size" src="https://i2.govx.io/images/cdn/text-png-size.png?t=600">
+      
+                  <ul>
+                    <li>
+                      <span>Image 01</span>
+                      
+                    </li>
+                    <li>
+                      <span>Image 02</span>
+                      
+                    </li>
+                    <li>
+                      <span>Image 03</span>
+                      
+                    </li>
+                    <li>
+                      <span>Image 04</span>
+                      
+                    </li>
+                    <li>
+                      <span>Image 05</span>
+                      
+                    </li>
+                  </ul>
+      
+                  
+                </div>
+        </a>
+      </section>
+    </main>
+    <section>
+
+
+
+      <main>
+      <section>
+    <div id="menu">
+      <a href="./login.html"></a></div>
+</section>
+    </main>
+  
+
+  
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  
+  </body>
+  
+
+
+
+
+  <script>
+    (function() {
+
+var	doc = document ,
+
+elemList = Construct_SubElement_List( doc.body ) ,
+
+len = elemList.length ,
+
+win = window ,
+
+i ,
+
+_Blocks = [] ,
+
+Card_Expander ;
+
+for (  i = 0 ; i < len ; i++  ) {
+
+var	currElem	= elemList[i] ;
+
+if (  currElem.className && /^Block_Expanding_Cards$/.test( currElem.className )  ) {
+
+  Card_Expander	= new Card_Expander_Obj( currElem ) ;
+}
+
+
+if (  currElem.parentNode && /body/i.test( currElem.parentNode.tagName ) && ( /^Block/.test( currElem.className ) || /^Block/.test( currElem.id ) )  )
+
+    _Blocks.push( currElem ) ;
+}
+
+
+function	Card_Expander_Obj   (  ElemObjRef  )  {
+
+var	ELEM		= ElemObjRef ,
+
+    ElemList	= Construct_SubElement_List( ELEM ) , num = ElemList.length , j , k ;
+
+
+//	##########	--	PROPERTIES
+
+this.ElemObj		= ELEM ;
+this._Cards		= [] ;
+
+this.current_index	= 0 ;
+
+for (  j = 0 ; j < num ; j++  ) {
+
+    var	CE = ElemList[j] ;
+
+    if ( /^US_City_sB/.test( CE.className ) ) {
+
+        var	subElemList	= Construct_SubElement_List( CE ), n2 = subElemList.length ,
+            h1_EO ,
+            shade_EO ,
+            content_EO ,
+            BG_EO ;
+
+        for ( k = 0 ; k < n2 ; k++ ) {
+
+            if ( /^card_h1/.test( subElemList[k].className ) )			h1_EO		= subElemList[k] ;
+
+            else if ( /^card_shade/.test( subElemList[k].className ) )	shade_EO		= subElemList[k] ;
+
+            else if ( /^card_content/.test( subElemList[k].className ) )	content_EO	= subElemList[k] ;
+
+            else if ( /^card_BG/.test( subElemList[k].className ) )		BG_EO		= subElemList[k] ;
+        }
+
+        this._Cards.push( {"EO": CE, "h1_EO": h1_EO, "shade_EO": shade_EO, "content_EO": content_EO, "BG_EO": BG_EO} ) ;
+
+        CE.onclick = function() {
+
+            if ( this.className.indexOf("_active") > -1 )	return ;
+
+            Card_Expander._Toggle( parseInt( this.getAttribute("data-card-index") ) ) ;
+        } ;
+    }
+}
+
+
+//	##########	--	METHODS
+
+
+
+this._Toggle = function ( new_card_index ) {
+
+    this._Cards[ this.current_index ].EO.className			= "US_City_sB" ;
+    this._Cards[ this.current_index ].h1_EO.className		= "card_h1" ;
+    this._Cards[ this.current_index ].shade_EO.className		= "card_shade" ;
+    this._Cards[ this.current_index ].content_EO.className	= "card_content" ;
+    this._Cards[ this.current_index ].BG_EO.className		= "card_BG" ;
+
+    this._Cards[ new_card_index ].EO.className			+= " _active" ;
+    this._Cards[ new_card_index ].h1_EO.className		+= " _active" ;
+    this._Cards[ new_card_index ].shade_EO.className	+= " _off" ;
+    this._Cards[ new_card_index ].content_EO.className	+= " _on" ;
+    this._Cards[ new_card_index ].BG_EO.className		+= " _active" ;
+
+    this.current_index	= new_card_index ;
+} ;
+}
+function	Construct_Element_Object (   elem  ,  propertyArr  ,  methodArr  ,  childArr  ,  innerHTML_CharStr  )  {
+
+var	Elem_Obj	= elem ,
+
+    Properties	= propertyArr ,
+
+    Methods		= methodArr ,
+
+    Children	= childArr ,
+
+    inner_html	= innerHTML_CharStr ,
+
+    len , i ;
+
+
+    len = Properties.length ;
+
+    for (  i = 0 ; i < len ; i++  )		Elem_Obj[ Properties[i][0] ] = Properties[i][1] ;
+
+
+    len = Methods.length ;
+
+    for (  i = 0 ; i < len ; i++  )		Elem_Obj[ Methods[i][0] ] = Methods[i][1] ;
+
+
+    len = Children.length;
+
+    for (  i = 0 ; i < len ; i++  )		Elem_Obj.appendChild( Children[i] ) ;
+
+
+    len = inner_html.length ;
+
+    if (  len > 0  )			Elem_Obj.innerHTML = inner_html ;
+
+
+    return		Elem_Obj ;
+
+}
+function	Construct_SubElement_List ( ElemObjRef ) {
+
+var	_ELEM		= ElemObjRef ,
+
+    tmpList		= _ELEM.getElementsByTagName("*") , tmpLen = tmpList.length , k ,
+
+       ELEM_LIST 	= [] ;
+
+
+for (  k = 0 ; k < tmpLen ; k++  )		ELEM_LIST.push( tmpList[k] ) ;
+
+
+return		ELEM_LIST ;
+}
+function	Construct_Filtered_SubElement_List ( refArr ) {
+
+var	_ELEM		= refArr[0] ,
+
+    tagName		= ( typeof refArr[1] !== "undefined" )? refArr[1] : "*" ,
+
+    tmpList		= _ELEM.getElementsByTagName( tagName ) , tmpLen = tmpList.length , k ,
+
+       ELEM_LIST 	= [] ;
+
+
+for (  k = 0 ; k < tmpLen ; k++  )		ELEM_LIST.push( tmpList[k] ) ;
+
+
+return		ELEM_LIST ;
+}
+function	xhrObj ( ) {
+
+var	xmlhttp	=	( window.XMLHttpRequest ) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP") ;
+
+return	xmlhttp ;
+
+}
+function	Add_CSS_Rule ( styleSheetRef , selectorStr , ruleStr ) {
+
+if ( typeof styleSheetRef.insertRule === "function" )	styleSheetRef.insertRule( selectorStr + '{' + ruleStr + '}' , styleSheetRef.cssRules.length ) ;
+
+else if ( typeof styleSheetRef.addRule === "function" )	styleSheetRef.addRule( selectorStr , ruleStr , styleSheetRef.rules.length ) ;
+}
+
+function	Build_CSS_JSON  ( json_input ) {
+
+this.CSS_JSON[ json_input.key ] = this.CSS_JSON[ this.CSS_JSON.length ] = json_input.json ;
+}
+function	Add_CSS_Rules  ( ) {
+
+var	len = this.CSS_JSON.length , j ;
+
+for ( j = 0 ; j < len ; j++ )
+
+    Add_CSS_Rule ( doc.styleSheets[0] , this.CSS_JSON[j].selector , this.CSS_JSON[j].rule ) ;
+}
+function	Validate_Email  ( emailStr )  {
+
+var	re = /\S+@\S+\.\S+/ ;
+
+return	re.test( emailStr ) ;
+}
+
+})() ;
+</script>
+
+
+<style>
+.card_holder_sB{
+    margin-top: 50%;
+}
+.Block_Expanding_Cards{
+    margin-top: 30%;
+}
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --clr-bg-header: ;
+  --clr-btn:  #daddc5;
+  --clr-dropdown:  #daddc5;
+  --clr-nav-hover: #daddc5;
+  --clr-dropdown-hov:  #daddc5;
+  --clr-dropdown-link-hov:  #daddc5;
+  --clr-light: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  background-color: var(--clr-bg-header);
+  width: 100%;
+  z-index: 1000;
+}
+#Menu{
+    margin-top: 10%;
+}
+
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(https://e0.pxfuel.com/wallpapers/513/976/desktop-wallpaper-bts-love-yourself-love-yourself-bts-pc.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 65rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  flex: 3;
+  display: flex;
+}
+
+.nav-links {
+  flex: 2;
+}
+
+.log-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.logo {
+  color: var(--clr-light);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 3rem;
+}
+
+.logo span {
+  font-weight: 300;
+}
+
+.btn {
+  display: inline-block;
+  padding: .5rem 1.3rem;
+  font-size: .8rem;
+  border: 2px solid var(--clr-light);
+  border-radius: 2rem;
+  line-height: 1;
+  margin: 0 .2rem;
+  transition: .3s;
+  text-transform: uppercase;
+}
+
+.btn.solid,
+.btn.transparent:hover {
+  background-color: var(--clr-light);
+  color: var(--clr-btn);
+}
+
+.btn.transparent,
+.btn.solid:hover {
+  background-color: transparent;
+  color: var(--clr-light);
+}
+
+.nav-links > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link > a {
+  line-height: 3rem;
+  color: var(--clr-light);
+  padding: 0 .8rem;
+  letter-spacing: 1px;
+  font-size: .95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: .5s;
+}
+
+.nav-link > a > i {
+  margin-left: .2rem;
+}
+
+.nav-link:hover > a {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 10rem;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.dropdown ul {
+  position: relative;
+}
+
+.dropdown-link > a {
+  display: flex;
+  background-color: var(--clr-light);
+  color: var(--clr-dropdown);
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  align-items: center;
+  justify-content: space-between;
+  transition: .3s;
+}
+
+.dropdown-link:hover > a {
+  background-color: var(--clr-dropdown);
+  color: var(--clr-light);
+}
+
+.dropdown-link:not(:nth-last-child(2)) {
+  border-bottom: 1px solid var(--clr-light);
+}
+
+.dropdown-link i {
+  transform: rotate(-90deg);
+}
+
+.arrow {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: -5.5px;
+  left: 32px;
+  background-color: var(--clr-light);
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: .3s;
+  z-index: -1;
+}
+
+.dropdown-link:first-child:hover ~ .arrow {
+  background-color: var(--clr-dropdown);
+}
+
+.dropdown-link {
+  position: relative;
+}
+
+.dropdown.second {
+  top: 0;
+  left: 100%;
+  padding-left: .8rem;
+  cursor: pointer;
+  transform: translateX(10px);
+}
+
+.dropdown.second .arrow {
+  top: 10px;
+  left: -5.5px;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover>.dropdown {
+  transform: translate(0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hamburger-menu-container {
+  flex: 1;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hamburger-menu {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hamburger-menu div {
+  width: 1.6rem;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--clr-light);
+  position: relative;
+  z-index: 1001;
+  transition: .5s;
+}
+
+.hamburger-menu div:before,
+.hamburger-menu div:after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: var(--clr-light);
+  border-radius: 3px;
+  transition: .5s;
+}
+
+.hamburger-menu div:before {
+  transform: translateY(-7px);
+}
+
+.hamburger-menu div:after {
+  transform: translateY(7px);
+}
+
+#check {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 90000;
+  cursor: pointer;
+  opacity: 0;
+  display: none;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div {
+  background-color: transparent;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:before {
+  transform: translateY(0) rotate(-45deg);
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
+  transform: translateY(0) rotate(45deg);
+}
+
+@keyframes animation {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 920px) {
+  .hamburger-menu-container {
+    display: flex;
+  }
+
+  #check {
+    display: block;
+  }
+
+  .nav-btn {
+    position: fixed;
+    height: calc(100vh - 3rem);
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-btn);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: .65s;
+  }
+
+  #check:checked ~ .nav-btn {
+    transform: translateX(0);
+  }
+
+  #check:checked ~ .nav-btn .nav-link,
+  #check:checked ~ .nav-btn .log-sign {
+    animation: animation .5s ease forwards var(--i);
+  }
+
+  .nav-links {
+    flex: initial;
+    width: 100%;
+  }
+
+  .nav-links > ul {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  .nav-link > a {
+    line-height: 1;
+    padding: 1.6rem 2rem;
+  }
+
+  .nav-link:hover > a {
+    transform: scale(1);
+    background-color: var(--clr-nav-hover);
+  }
+
+  .dropdown,
+  .dropdown.second {
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+    padding: 0;
+    background-color: var(--clr-dropdown-hov);
+    display: none;
+  }
+
+  .nav-link:hover > .dropdown,
+  .dropdown-link:hover>.dropdown {
+    display: block;
+  }
+
+  .nav-link:hover > a > i,
+  .dropdown-link:hover>a>i {
+    transform: rotate(360deg);
+  }
+
+  .dropdown-link > a {
+    background-color: transparent;
+    color: var(--clr-light);
+    padding: 1.2rem 2rem;
+    line-height: 1;
+  }
+
+  .dropdown.second .dropdown-link > a {
+    padding: 1.2rem 2rem 1.2rem 3rem;
+  }
+
+  .dropdown.second .dropdown.second .dropdown-link > a {
+    padding: 1.2rem 2rem 1.2rem 4rem;
+  }
+
+  .dropdown-link:not(:nth-last-child(2)) {
+    border-bottom: none;
+  }
+
+  .arrow {
+    z-index: 1;
+    background-color: var(--clr-btn);
+    left: 10%;
+    transform: scale(1.1) rotate(45deg);
+    transition: .5s;
+  }
+
+  .nav-link:hover .arrow {
+    background-color: var(--clr-nav-hover);
+  }
+
+  .dropdown .dropdown .arrow {
+    display: none;
+  }
+
+  .dropdown-link:hover > a {
+    background-color: var(--clr-dropdown-link-hov);
+  }
+
+  .dropdown-link:first-child:hover ~ .arrow {
+    background-color: var(--clr-nav-hover);
+  }
+
+  .nav-link > a > i {
+    font-size: 1.1rem;
+    transform: rotate(-90deg);
+    transition: .7s;
+  }
+
+  .dropdown i {
+    font-size: 1rem;
+    transition: .7s;
+  }
+
+  .log-sign {
+    flex: initial;
+    width: 100%;
+    padding: 1.5rem 1.9rem;
+    justify-content: flex-start;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
+
+
+.hp-slider
+{
+  margin:15px auto;
+  width: 100%;
+  max-width:1460px;
+  height: 100%;
+  max-height:2600px;
+  position:relative;
+  overflow:hidden;
+  margin-right: -7.5px;
+  padding: 5px 0 15px 0;
+}
+
+.hp-slider .slider-title
+{
+  text-align:center;
+  font-family:'geomanist-bold';
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  font-size: 15px;
+}
+
+@media(min-width:768px)
+{
+  .hp-slider .slider-title
+  {
+    font-size:19px;
+  }
+}
+
+.hp-slider a
+{
+  display:block;
+  overflow:hidden;
+}
+
+.hp-slider a img
+{
+  width: 100%;
+  height: 100%;
+  display:block;
+  padding: 2.5px;
+}
+
+
+/* arrows */
+
+.hp-slider .slick-arrow
+{
+  background:none;
+  border:none;
+  color:#000;
+  font-size: 2.5em;
+  position:absolute;
+  top:0;
+  text-align:center;
+  display: block;
+  height:100%;
+  width: 5%;
+  color:#000;
+  transition:color ease-out 0.33s;
+  overflow:hidden;
+  background:#daddc5;
+  z-index:5;
+
+}
+
+
+.hp-slider .slick-arrow i
+{
+  display:block;
+  margin:0 auto;
+}
+
+.hp-slider .slick-prev
+{
+  left: -5%;
+ 
+}
+
+.hp-slider .slick-next
+{
+  right: -5%;
+}
+
+@media(min-width:768px)
+{
+  .hp-slider .slick-arrow
+  {
+    font-size:3em;
+    background:transparent;
+  }
+
+  .hp-slider .slick-prev
+  {
+    left: 0%;
+  
+  }
+
+  .hp-slider .slick-next
+  {
+    right: 0%;
+  }
+
+  .hp-slider a img
+  {
+    padding:7.5px;
+  }
+}
+
+
+
+/**
+
+slider top test
+
+**/
+
+.national-parks-top
+{
+
+}
+
+.national-parks-top a
+{
+display:block;
+}
+
+.extra-copy-fluff
+{
+font-family: rockwell, georgia,'Josefin Slab', serif;
+text-align:center;
+margin:0 auto;
+padding: 20px 10% 15px;
+background: #283a2c;
+background: #daddc5;
+font-size: 12px;
+color: #fff;
+display: none;
+}
+
+@media(min-width:768px)
+{
+.extra-copy-fluff
+{
+padding: 20px 20% 20px;
+font-size: 21px;
+text-transform:uppercase;
+}
+
+.extra-copy-fluff p
+{
+max-width:600px;
+margin:0 auto;
+}
+}
+
+.cb-slideshow,
+.cb-slideshow:after {
+position: relative;
+width: 100%;
+height: auto;
+top: 0px;
+left: 0px;
+z-index: 0;
+overflow:hidden;
+background:#000;
+}
+
+@media(min-width:992px)
+{
+.cb-slideshow:after { 
+content: '';
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+40,0.66+100 */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.66) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.66) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.66) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a8000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+width:100%;
+display:block;
+position:absolute;
+z-index:33;
+left:0;
+top:0;
+height:768px;
+
+}
+}
+.cb-slideshow .nat-park-badge
+{
+position:relative;
+z-index:50;
+width:50%;
+margin: 5% auto;
+max-width: 450px;
+display:block;
+}
+
+.cb-slideshow .button
+{
+position:relative;
+z-index:10;
+display:block;
+text-align:center;
+padding:12.5px;
+border:2px solid #fff;
+border-radius:3px;
+max-width:200px;
+margin:0px auto 30px;
+font-family:'geomanist-bold';
+color:#fff;
+font-size:15px;
+background:rgba(0,0,0,.15);
+transition:all ease-out 0.33s;
+}
+
+@media(min-width:992px)
+{
+.cb-slideshow .button
+{
+margin-bottom:80px;
+}
+.cb-slideshow:hover .button
+{
+background:#283a2c;
+border-color:#daddc5;
+box-shadow:2px 2px 10px -1px rgba(0,0,0,.66);
+
+}
+}
+
+.cb-slideshow li span { 
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0px;
+left: 0px;
+color: transparent;
+background-size: cover;
+background-position: 50% 25%;
+background-repeat: none;
+opacity: 0;
+z-index: 0;
+-webkit-backface-visibility: hidden;
+-webkit-animation: imageAnimation 50s linear infinite 0s;
+-moz-animation: imageAnimation 50s linear infinite 0s;
+-o-animation: imageAnimation 50s linear infinite 0s;
+-ms-animation: imageAnimation 50s linear infinite 0s;
+animation: imageAnimation 50s linear infinite 0s; 
+}
+
+
+.cb-slideshow li:nth-child(1) span { 
+background-image: url(https://img.freepik.com/free-photo/sunset-silhouette-famous-bridge-skyscrapers-generated-by-ai_188544-24172.jpg?ga=GA1.1.2030332028.1722775633&semt=ais_hybrid) ;
+}
+.cb-slideshow li:nth-child(2) span { 
+background-image: url(https://img.freepik.com/free-photo/aerial-view-forest-shrouded-morning-fog-beautiful-autumn-day_1153-4049.jpg?ga=GA1.1.2030332028.1722775633&semt=ais_hybrid);
+-webkit-animation-delay: 10s;
+-moz-animation-delay: 10s;
+-o-animation-delay: 10s;
+-ms-animation-delay: 10s;
+animation-delay: 10s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+background-image: url(https://img.freepik.com/free-photo/horizontal-shot-beach-with-person-gliding-down-paramotor-parachute_181624-16575.jpg?ga=GA1.2.2030332028.1722775633&semt=ais_hybrid);
+-webkit-animation-delay: 20s;
+-moz-animation-delay: 20s;
+-o-animation-delay: 20s;
+-ms-animation-delay: 20s;
+animation-delay: 20s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+background-image: url(https://img.freepik.com/free-photo/tourist-carrying-baggage_23-2151747381.jpg?t=st=1723196818~exp=1723200418~hmac=d649ff76f9852b5df52095e62f218a2fe5f79a0ab77e9d75d70051eb024f324e&w=1380);
+-webkit-animation-delay: 30s;
+-moz-animation-delay: 30s;
+-o-animation-delay: 30s;
+-ms-animation-delay: 30s;
+animation-delay: 30s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+background-image: url(https://img.freepik.com/free-photo/view-spectacular-nature-landscape_23-2150763672.jpg?ga=GA1.1.2030332028.1722775633&semt=ais_hybrid);
+-webkit-animation-delay: 40s;
+-moz-animation-delay: 40s;
+-o-animation-delay: 40s;
+-ms-animation-delay: 40s;
+animation-delay: 40s; 
+}
+
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+0% { opacity: 0;
+-ms-animation-timing-function: ease-in; }
+10% { opacity: 1;
+-ms-animation-timing-function: ease-out;
+-webkit-transform: scale(1.05) translate(1.5%, 1);
+}
+20% { opacity: 1; 
+-webkit-transform: scale(1.15) translate(3%, 2%);
+}
+30% { opacity: 0;
+-webkit-transform: scale(1.2) translate(4%, 2.5%)
+}
+100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+0% { opacity: 0;
+-ms-animation-timing-function: ease-in; }
+10% { opacity: 1;
+-ms-animation-timing-function: ease-out;
+-webkit-transform: scale(1.05) translate(1.5%, 1);
+}
+20% { opacity: 1; 
+-webkit-transform: scale(1.15) translate(3%, 2%);
+}
+30% { opacity: 0;
+-webkit-transform: scale(1.2) translate(4%, 2.5%)
+}
+100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+0% { opacity: 0;
+-ms-animation-timing-function: ease-in; }
+10% { opacity: 1;
+-ms-animation-timing-function: ease-out;
+-webkit-transform: scale(1.05) translate(1.5%, 1);
+}
+20% { opacity: 1; 
+-webkit-transform: scale(1.15) translate(3%, 2%);
+}
+30% { opacity: 0;
+-webkit-transform: scale(1.2) translate(4%, 2.5%)
+}
+100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+0% { opacity: 0;
+-ms-animation-timing-function: ease-in; }
+10% { opacity: 1;
+-ms-animation-timing-function: ease-out;
+-webkit-transform: scale(1.05) translate(1.5%, 1);
+}
+20% { opacity: 1; 
+-webkit-transform: scale(1.15) translate(3%, 2%);
+}
+30% { opacity: 0;
+-webkit-transform: scale(1.2) translate(4%, 2.5%)
+}
+100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+0% { opacity: 0;
+-ms-animation-timing-function: ease-in; }
+10% { opacity: 1;
+-ms-animation-timing-function: ease-out;
+-webkit-transform: scale(1.05) translate(1.5%, 1);
+}
+20% { opacity: 1; 
+-webkit-transform: scale(1.15) translate(3%, 2%);
+}
+30% { opacity: 0;
+-webkit-transform: scale(1.2) translate(4%, 2.5%)
+}
+100% { opacity: 0 }
+}
+
+
+/* Show at least something when animations not supported */
+.no-cssanimations .cb-slideshow li span{
+opacity: 1;
+}
+a {   color: rgb( 0 , 0 , 0 ); text-decoration: none;   }
+
+a:visited , a:active , a:focus {   border: none;   }
+
+img {   border: none;   }
+
+span {   display: inline-block;   }
+
+.Img_Dflt {   width: 100%;   }
+
+.Img_WH100 {   width: 100%; height: 100%;   }
+
+.Img_H100 {   height: 100%;   }
+
+.noDisplay , ._Off {   display: none;   }
+
+.SVG_Dflt {   position: absolute; top: 0%; left: 0%; width: 100%; height: 100%;   }
+html {   font-size: 100%;   }
+
+body {
+
+    background: #283a2c;
+    font-size: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb( 255 , 255 , 255 );
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+    height: 100%;
+
+}
+.Block_Expanding_Cards {
+
+    position: relative;
+    margin: 5vh auto;
+    width: 100%;
+    height: 85vh;
+    text-align: center;
+}
+.card_holder_sB {
+
+    position: relative;
+    margin: 0em auto;
+    width: 90%;
+    height: 100%;
+}
+.US_City_sB {
+
+    display: inline-block;
+    position: relative;
+    margin: 0em 0.5em;
+    width: 8%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 1.5em;
+    overflow: hidden;
+    transition: width 0.25s ease;
+}
+.US_City_sB._active {
+
+    width: 40%;
+}
+.US_City_sB:hover {
+
+    cursor: pointer;
+}
+.card_h1 {
+
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+    font-size: 2em;
+    margin: 0em;
+    padding: 0em;
+    font-weight: normal;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+.card_h1._active {
+
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    font-size: 4em;
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    margin: 2em auto 0em auto;
+    text-shadow: 1px 1px 0.0625em black;
+}
+.card_content {
+
+    position: relative;
+    margin: 5em auto 0em auto;
+    width: 80%;
+    display: none;
+}
+.card_content._on { display: block; text-shadow: 1px 1px 0px black; }
+
+.card_dscrptn {
+
+    font-size: 2em;
+    margin: 0em;
+    padding: 0em;
+}
+.card_photo_cred {
+
+    color: rgb( 0 , 234 , 0 );
+}
+.card_shade {
+
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb( 0 , 0 , 0 );
+    opacity: 0.5;
+}
+.card_shade._off {	display: none;	}
+
+.card_shade:hover { opacity: 0; }
+
+.card_BG {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    transition: left 1.5s ease;
+}
+.card_BG._active {
+
+    left: -35%;
+}
+
+@media ( max-width : 400px ) {
+
+
+    body {  font-size: 60%;  }
+
+    .card_h1._active {	margin: 0.125em auto 0em auto;	}
+
+}
+@media ( min-width : 401px ) and ( max-width : 600px ) {
+
+
+
+    body {  font-size: 70%;  }
+
+    .card_h1._active {	margin: 0.125em auto 0em auto;	}
+
+}
+@media ( min-width : 601px ) and ( max-width : 800px ) {
+
+
+    body {  font-size: 80%;  }
+
+    .card_h1._active {	margin: 0.25em auto 0em auto;	}
+
+}
+@media ( min-width : 801px ) and ( max-width : 1000px ) {
+
+
+    body {  font-size: 90%;  }
+
+    .card_h1._active {	margin: 1em auto 0em auto;	}
+
+}
+@media ( min-width : 1001px ) and ( max-width : 1200px ) {
+
+
+    body {  font-size: 100%;  }
+
+}
+@media ( min-width : 1201px ) and ( max-width : 1400px ) {
+
+
+    body {  font-size: 100%;  }
+
+}
+@media ( min-width : 1401px ) {
+
+
+    body {  font-size: 125%;  }
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</html>

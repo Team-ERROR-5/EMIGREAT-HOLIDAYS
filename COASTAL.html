@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  /* font */
+  .h1  {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+    body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+/*Button*/
+.btn{
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.btn:hover{
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+/* Slider */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 95vw;
+  height: 650px;
+  margin: auto;
+}
+
+.slide {
+    display: flex;
+    flex: 0 0 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    transition: transform 1s ease-in-out;
+    transform: translateX(100%);
+  }
+
+.slide.active {
+  transform: translateX(0);
+}
+
+.text-box {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  padding: 4em;
+  box-sizing: border-box;
+  width: 30%;
+}
+
+img {
+  object-fit: cover;
+  flex: 7;
+  width: 70px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+/* Background colors for each slide*/
+#slide1 { background-color: #93bebc; }
+#slide2 { background-color: #0767b2; }
+#slide3 { background-color: #d89069; }
+#slide4 { background-color: #927463; }
+#slide5 { background-color: #756f6c; }
+
+
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  .slide {
+    flex-direction: column;
+  }
+
+  .text-box {
+    order: 2;
+    width: 100%;
+    padding: 2em;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .slide {
+    flex-direction: column;
+  }
+
+  .text-box {
+    order: 2;
+    width: 100%;
+    padding: 1em;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+
+/* footer */
+
+
+</style>
+<body>
+  <h1 style="text-align: center; margin-top: 17px; color: black;"> <span style="background-color: rgb(116, 226, 226);" >  COASTAL</span></h1>
+
+    <div class="slider-container" style="margin-top: 20px;">
+        <div class="slide active" id="slide1">
+          <div class="text-box">
+            <h2>Discover the wonders of Cinque Terre</h2>
+            <p>The Cinque Terre represent one of the most extensive Mediterranean natural  areas of Liguria; this is due to mainly historical and geomorphological reasons that have prevented an excessive building expansion and the construction of further main roads.<br>Average daily cost for:<br><br>
+              Hostel room : €20-40 (dorm spot)<br><br>
+              Basic room for two : €130-250<br><br>
+              Public transport ticket : €5-10<br><br>
+              Coffee : €1-4<br><br>
+              Sandwich : €6-12<br><br>
+              Dinner for two : €60-150<br><br>
+              Glass of Cinque Terre wine : €6-15              
+            </p>
+            <a href="./coastal read more.html" class="btn">Read More</a>
+          </div>
+          <img src="https://s.yimg.com/ny/api/res/1.2/NIWgurcQMipZwn8I.OBDew--/YXBwaWQ9aGlnaGxhbmRlcjt3PTE2MDA7aD0xMDY2O3E9NTA-/https://s.yimg.com/os/creatr-uploaded-images/2024-04/d7247600-f8a4-11ee-af4b-532fc679a3ef" alt="Slide 1">
+        </div>
+        <div class="slide" id="slide2">
+          <div class="text-box">
+            <h2>Take a leap into the ocean</h2>
+            <p>Iceland isn’t your typical snorkel destination. They have beaches, but they aren’t warm and they have pools, but they are thermally heated. So why on earth should you consider snorkeling in Iceland on your stay? Because the crazy geology there makes it a singular experience.<br><br>
+DIVES (Days / Dives) - HAVELOCK	 -    NEIL<br><br>
+4 days / 8 dives	 -   Rs. 32,500	 -  Rs. 32,500<br><br>
+5 days / 10 dives  - 	Rs. 39,500	 -  Rs. 39,500<br><br>
+6 days / 12 dives	 -   Rs. 47,000	 -  Rs. 47,000<br><br>
+Additional Diving 	-  Rs. 7,000	 -    Rs. 7,000
+(After 6 days)
+            </p>
+            <a href="./coastal read more.html" class="btn">Read More</a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 2">
+        </div>
+    
+        <div class="slide" id="slide3">
+          <div class="text-box">
+            <h2>A trip to the middle of the ocean</h2>
+            <p>Beyond holiday periods such as Black Friday, Cyber Monday, and Labor Day when there may be some flash sales, January and February are particularly good times to book a cruise, as the first two months of the year are considered “wave season” in the cruising industry.<br><br>
+              International Cruise Tour Packages-	No. of Days-	Price*<br><br>
+Spectrum Cruise (Singapore - Penang - Phuket - Singapore)	-4 Nights/ 5 Days-	Rs. 41 808<br><br>
+Undiscovered Antarctica	-13 Nights/ 14 Days-	Rs. 11 07 300<br><br>
+Unexplored Greenland	-16 Nights/ 17 Days-	Rs. 16 62 440
+            </p>
+            <a href="./coastal read more.html" class="btn">Read More</a>
+          </div>
+          <img src="https://img.freepik.com/free-photo/large-luxurious-cruise-ship-sailing-sea-sunny-day-ai-generative_123827-23852.jpg?t=st=1723297633~exp=1723301233~hmac=3dcd34bfa11b1b3a8fe40c025c0afbf509a9e33bb7aaf78b671a9a76c93930c6&w=996" alt="Slide 3">
+        </div>
+
+        <div class="slide" id="slide4">
+            <div class="text-box">
+              <h2>Just let go – and fall like a little waterfall.</h2>
+              <p>Most definitely, this is one of the most beautiful beaches in Calabria: a crescent-shaped stretch of sand about thirty metres long in the Gulf of Policastro at San Nicola Arcella in the province of Cosenza.
+                 The shallow waters are calm and present a broad palette of blue shades. The splendid rock formation with its spectacular arch marking the point where it is possible to enter the sea rises to a height of 20 metres.</p>
+                Hostel room : €15-30 (dorm spot)<br><br>
+              Basic room for two : €110-200<br><br>
+              Public transport ticket : €5-10<br><br>
+              Coffee : €1-2<br><br>
+              Sandwich : €6-12<br><br>
+              Dinner for two : €60-120<br><br>
+                <a href="./coastal read more.html" class="btn">Read More</a>
+            </div>
+            <img src="https://mediaim.expedia.com/destination/2/7e4441eb58e0b80e50402c65638f7024.jpg" alt="Slide 3">
+          </div>
+
+          <div class="slide" id="slide5">
+            <div class="text-box">
+              <h2>Let's Meet where the sun sets in the Pradise </h2>
+              <p>The iconic architectural landmark was completed in 1932 and remains as one of the tallest single-span concrete bridges in the world, spanning 714 feet in length. Although iconic, it's one of the places to be most aware and responsible when traveling in Monterey County<br><br>
+                Average cost of transportation expenses<br><br>
+                Domestic flight: $290²<br><br>
+                International flight (Osaka, Japan): $1,364²<br><br>
+                International flight (Nice, France): $885²<br><br>
+                Rental car: $42²<br><br>
+                Taxi: $46³<br><br>
+                Airport parking: $30 per day⁴<br><br>
+                Fuel: $3.65 per gallon⁵</p>
+              <a href="./coastal read more.html" class="btn">Read More</a>
+            </div>
+            <img src="https://escapelosangeles.com/wp-content/uploads/2023/06/COAST-BRIDGE-BIG-SUR-4J0B5865-scaled.jpg" alt="Slide 3">
+          </div>
+  
+    <!--Used font awesome for prev and next icons-->
+        <i class="arrow fa-solid fa-arrow-left" id="prevBtn"></i>
+        <i class="arrow fa-solid fa-arrow-right" id="nextBtn"></i>
+    
+      </div>
+      <div>
+        <a href="./menu.html" class="btn" style="background-color: #d89069;margin-left: 500px;">PREVIOUS</a>
+        <a href="./WEDDING.html" class="btn" style="background-color: #d89069;margin-left: 300px;">NEXT</a>
+      </div>
+      
+<!--footer -->
+
+
+      
+</body>
+<script>
+
+let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let slideInterval;
+  
+    const showSlide = (n) => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (n + totalSlides) % totalSlides;
+      slides[currentSlide].classList.add('active');
+    }
+  
+    const nextSlide = () => showSlide(currentSlide + 1);
+  
+    const prevSlide = () => showSlide(currentSlide - 1);
+  
+    const startSlideShow = () => slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+  
+    const stopSlideShow = () => clearInterval(slideInterval);
+  
+    document.getElementById('prevBtn').addEventListener('click', prevSlide);
+    document.getElementById('nextBtn').addEventListener('click', nextSlide);
+  
+    // Pause the slideshow when the mouse is over the slider
+    document.querySelector('.slider-container').addEventListener('mouseenter', stopSlideShow);
+  
+    // Restart the slide show when the mouse leaves the slider
+    document.querySelector('.slider-container').addEventListener('mouseleave', startSlideShow);
+  
+    // Show the first slide and start the slide show when the page loads
+    showSlide(currentSlide);
+    startSlideShow();
+ 
+    
+  
+</script>
+</html>

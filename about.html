@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body >
+  <div class="container" >
+    <div class="row"  >
+      <!-- left side content -->
+        <div class=" about-content animated fadeIn" style="background-image: url('https://www.solidbackgrounds.com/images/2560x1600/2560x1600-pale-lavender-solid-color-background.jpg');"  >
+          <h1 class="animated fadeIn one"><span>about</span></h1>
+             <div class="about-me">
+               <div class="animated fadeIn two">
+                  <p>EmiGreat Holidays is a private retailer or public service that provides travel and tourism-related services to the general public on behalf of accommodation or travel suppliers to offer different kinds of travelling packages for each destination. EmiGreat Holidays can provide outdoor recreation, arranging logistics for luggage and medical items delivery for travellers upon request, public transport timetables, car rentals, and bureau de change services. EmiGreat Holidays can also serve as general sales agents for airlines that do not have offices in a specific region. </p>
+                  <p> EmiGreat Holidays main function is to act as an agent, selling travel products and services on behalf of a supplier. They are also called Travel Advisors. They do not keep inventory in-hand unless they have pre-booked hotel rooms or cabins on a cruise ship for a group travel event such as a wedding, honeymoon, or other group event.</p>
+                </div>
+               <div class="Synopsis-highlightLine five" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+               <div class="animated fadeIn three">
+                  <p class="Synopsis-highlight">A package tour, package vacation, or package holiday comprises transport and accommodation advertised and sold together by a vendor known as a tour operator. Other services may be provided such as a rental car, activities or outings during the holiday. Transport can be via automobile, buses, charter airline, and may also include travel between areas as part of the holiday.</p>
+                </div>
+                <div class="Synopsis-highlightLine five" style=" transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                <div class="animated fadeIn four">
+                  <h3>Our Prestigious Awards</h3>
+                  <p><ul>
+                  <li>WORLD TRAVEL AWARDS</li>
+                  <li>TOURISM PILLAR AWARDS</li>
+                  <li> UNWTO Awards</li>
+                  </ul>
+                  </p>
+              <h3>Our Motto</h3>
+                  <p> "Timeless elegance in every journey"</p>
+              <h3>Employee-Owned</h3>
+                  <p>We are unique being an employee-owned travel agency, with a high bar for our integrity and dedication to customer service. Our strong company culture is anchored  by our mission and values.</p>
+              <h3>Engaged</h3>
+                  <p>Our management team is active on various travel advisory boards and committees for travel organizations like ASTA, travel magazines (Afar, Travel+Leisure), major hotel brands, and airlines. We are engaged with our industry and our opinions continue to be sought across the broad spectrum of our industry. </p>
+              <h3>Connected</h3>
+                  <p>TravelStore is a top member of the prestigious Signature Travel Network, a highly regarded worldwide partnership allowing us to provide our customers unmatched benefits and additional value when you travel. We are a Premium Member of ASTA (American Society of Travel Advisors), CLIA (Cruise Line International Association) and an affiliate of BCD Travel.</p>
+                 
+                </div>
+            </div>
+        </div>
+      <!-- right side content -->
+        <div class="about-panel-wrapper">
+          <div class=" about-panel animated fadeIn">
+            <div class="zero photo-about animated fadeIn" style="transform:translateY(0px) translateZ(0px)">
+              <div class="hide-photo-filter animated fadeIn"></div>
+              <div class="about-info">
+                <h3 class="about-info-name animated fadeInUp up-one" style="color: #fff;">EmiGreat Holidays</h3>
+                <div class="about-info-contact">
+                  <h4 class="animated fadeInUp up-two"style="color: rgb(166, 164, 164);">Travel Agency </h4>
+                  <p class="animated fadeInUp up-three" style="color: rgb(166, 164, 164);">4456 New Avenue, New York City, NY</p>
+                  <a href="" class="animated fadeInUp up-four" style="color: rgb(166, 164, 164);">emigreatholidays@email.com</a>
+                </div>
+              </div>
+            </div>
+           </div>
+       </div>
+    </div>
+  </div>
+</body>
+<a href="./front.html"><button type="submit" style="margin-left: 600px;background-color: purple;">Back</button></a>
+<style>
+ 
+
+
+  
+  
+  /*  About Page animation for content  */
+  @mixin respond-to($media) {
+    @if $media == handhelds {
+      @media only screen and (max-width: $break-small) { @content; }
+    }
+    @else if $media == medium-screens {
+      @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    }
+    @else if $media == wide-screens {
+      @media only screen and (min-width: $break-large) { @content; }
+    }
+  }
+  
+  
+  html, body {
+      height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+   color:rgb(73, 32, 73);
+    background-color: #fff;
+    width: 100%;
+    max-width: 100%
+  }
+  
+  .row{
+    margin:0;
+  }
+  
+  .about-content, .about-panel {
+      max-width: 50%;
+      width: 50%;
+  }
+  
+  .container {
+    margin: 0;
+    padding: 0;
+   
+    background-color:white;
+    overflow-y: auto;
+    height: 100vh;
+    max-width: 100%;
+  }
+  .container p{
+    color: #000;
+  }
+  .container h3{
+    color:rgb(73, 32, 73);
+    font-weight: 500;
+  }
+  .about-panel {
+    padding: 0;
+    position: absolute;
+    top:0;
+    right:0;
+    -webkit-animation: example 1.2s both ease-in;
+    -moz-animation: example 1.2s both ease-in;
+    animation: example 1.2s both ease-in;
+    height: 100vh;
+  
+    .photo-about{
+      position:relative;
+      top:0;
+      height: 100vh !important;
+      background-size: cover;
+      overflow: hidden
+    }
+  }
+  
+  .about-info{
+    font-family: "Montserrat";
+    position: absolute;
+    z-index: 100100;
+    top:50%;
+    color: #000;
+    text-align: center;
+    width: 100%;
+  
+    .about-info-name{
+      width: 100%;
+      letter-spacing: 3px;
+      font-weight:500;
+      font-size: 2.5vw
+    }
+  
+    .about-info-contact{
+      margin-top: 25px;
+      padding-bottom: 100px;
+      margin-bottom: 100px;
+      height: 130px;
+  
+      h4{
+        margin-bottom: 5px;
+        font-weight:300;
+        font-size: 1.3vw
+      }
+    
+      p{
+        font-size: 1.2vw;
+        font-weight: 100;
+        color:#000;
+        margin-top: 10px;
+        margin-bottom: 0
+      }
+      
+      a {
+        margin-bottom: 5px;
+        font-weight:300;
+        font-size: 1.2vw;
+        color:rgb(73, 32, 73);
+      }
+    }
+  }
+  
+  .about-content{
+    float:left;
+    padding-top:30px;
+    background: #fff;
+    color:rgb(73, 32, 73);
+  }
+  
+    p, blockquote{
+      font-size:13px;
+        line-height: 20px;
+        letter-spacing: 0.07em;
+    }
+  
+    h1{
+      z-index:-1;
+      color:rgb(73, 32, 73);
+      text-align:center;
+      line-height: 90px;
+      font-size: 90px;
+      font-weight:200;
+      letter-spacing: -0.1em;
+      width: 95%;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+   
+    .about-me{
+      margin: 3% auto;
+      text-align: justify;
+      font-weight: 300;
+      width: 63%;
+  
+      p{
+        line-height: 23px;
+        }
+      .row{
+        height:100vh
+      }
+    }
+  
+  
+  
+  .Synopsis-highlightLine {
+      width: 52px;
+      height: 4px;
+    
+      margin: 30px 0;
+  }
+  
+  .about-content .Synopsis-highlight {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 25px;
+      width: 100%;
+      color:rgb(73, 32, 73);
+  }
+  
+  /* Generates animations for cascading tiles */
+  .about-panel{
+    @for $i from 1 through length($moveup) {
+    $item: nth($moveup, $i);
+    height: 100%;
+  
+      .about-info-contact{
+        display:block;
+        margin: 30px
+      }
+  
+      .about-info-contact .#{$item} {
+        -webkit-animation-delay: #{$i * 0.08s};
+        -moz-animation-delay: #{$i * 0.08s};
+        animation-delay: #{$i * 0.08s};
+        transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+        display:block;
+      }
+    }
+  }
+  
+  .photo-about {
+    background: url("https://img.freepik.com/premium-photo/isolated-dramatic-purple-sky-weary-backpacker-stands-atop-mistcovered-mountain-peak-symb_1176614-13776.jpg?ga=GA1.1.2030332028.1722775633&semt=ais_hybrid") no-repeat center center;
+    background-size: cover;
+    z-index: 45;
+  
+  }
+  
+  .hide-photo-filter {
+      position: relative;
+      top: 0;
+      background-color: rgba(96, 26, 70, 0.2) ;
+      z-index: 50;
+      width: 100%;
+      height: 100%;
+  }
+  
+
+</style>
+</html>

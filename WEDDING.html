@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+CZ:wght@100..400&display=swap" rel="stylesheet">
+<link href="/your-path-to-uicons/css/uicons-[your-style].css" rel="stylesheet">
+</head>
+<style>
+	*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  align-content: space-evenly;
+  justify-content: center;
+  gap: 10px;
+  min-height: 80vh;
+  margin: 0;
+  padding: 10px 0;
+  color: #938e8e;
+  background-image: url(https://e0.pxfuel.com/wallpapers/131/425/desktop-wallpaper-iphone-blur-gradation-pink-purple-pastel-thumbnail.jpg);
+  font-family: 'Unna', serif;
+  line-height: 1.1;
+}
+
+header{
+  width: 96vw;
+  padding: 2vw;
+  outline: 1px solid #fff3;
+  background-color: #fff1;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4.5vw;
+}
+
+h1.balanced {
+  text-wrap: balance;
+}
+
+.heading p {
+  margin: 0;
+  color: #fff9;
+  font-size: max(3vw, 1rem);
+  font-style: italic;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 10vw;
+    margin: 1.5vw auto;
+    border-top: solid 2px;
+  }
+}
+
+     /* font */
+	 /* .h1 {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-style: normal;
+} */
+     /* template */
+    .grid {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	background: #cbe2eb;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+figure.effect-bubba {
+	background: #9e5406;
+}
+
+figure.effect-bubba img {
+	opacity: 0.7;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-bubba:hover img {
+	opacity: 0.4;
+}
+
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+figure.effect-bubba figcaption::after {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1,0);
+	transform: scale(1,0);
+}
+
+figure.effect-bubba h2 {
+	padding-top: 30%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,-20px,0);
+	transform: translate3d(0,-20px,0);
+}
+
+figure.effect-bubba p {
+	padding: 20px 2.5em;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+@media screen and (max-width: 50em) {
+	.content {
+		padding: 0 10px;
+		text-align: center;
+	}
+	.grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
+}
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+body {
+	background: #eceef3;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+
+a {
+	outline: none;
+	color: #3498db;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #528cb3;
+}
+
+section {
+	padding: 1em;
+	text-align: center;
+}
+
+.content {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.content > h2 {
+	clear: both;
+	margin: 0;
+	padding: 4em 1% 0;
+	color: #484B54;
+	font-weight: 800;
+	font-size: 1.5em;
+}
+
+.content > h2:first-child {
+	padding-top: 0em;
+}
+
+/* Header */
+.codrops-header {
+	margin: 0 auto;
+	padding: 4em 1em;
+	text-align: center;
+}
+
+.codrops-header h1 {
+	margin: 0;
+	font-weight: 800;
+	font-size: 4em;
+	line-height: 1.3;
+}
+
+.codrops-header h1 span {
+	display: block;
+	padding: 0 0 0.6em 0.1em;
+	color: #74777b;
+	font-weight: 300;
+	font-size: 45%;
+}
+
+/* Demo links */
+.codrops-demos {
+	clear: both;
+	padding: 1em 0 0;
+	text-align: center;
+}
+
+.content + .codrops-demos {
+	padding-top: 5em;
+}
+
+.codrops-demos a {
+	display: inline-block;
+	margin: 0 5px;
+	padding: 1em 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.codrops-demos a:hover,
+.codrops-demos a:focus,
+.codrops-demos a.current-demo {
+	background: #3c414a;
+	color: #fff;
+}
+
+/* To Navigation Style */
+.codrops-top {
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 0.69em;
+	line-height: 2.2;
+}
+
+.codrops-top a {
+	display: inline-block;
+	padding: 1em 2em;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+.codrops-top span.right {
+	float: right;
+}
+
+.codrops-top span.right a {
+	display: block;
+	float: left;
+}
+
+.codrops-icon:before {
+	margin: 0 4px;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'codropsicons';
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.codrops-icon-prev:before {
+	content: "\e004";
+}
+
+/* Related demos */
+.related {
+	clear: both;
+	padding: 6em 1em;
+	font-size: 120%;
+}
+
+.related > a {
+	display: inline-block;
+	margin: 20px 10px;
+	padding: 25px;
+	border: 1px solid #4f7f90;
+	text-align: center;
+}
+
+.related a:hover {
+	border-color: #39545e;
+}
+
+.related a img {
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.related a:hover img,
+.related a:active img {
+	opacity: 1;
+}
+
+.related a h3 {
+	margin: 0;
+	padding: 0.5em 0 0.3em;
+	max-width: 300px;
+	text-align: left;
+}
+
+/* Demo ad design */
+body #cdawrap {
+	background: none;
+	top: 50px;
+	border: none;
+}
+
+body #cdawrap a {
+	color: #fff !important;
+}
+
+body #cda-remove {
+	color: #fff;
+}
+
+@media screen and (max-width: 25em) {
+	.codrops-header {
+		font-size: 75%;
+	}
+	.codrops-icon span {
+		display: none;
+	}
+}
+
+.background{
+	background-image: url(https://i.pinimg.com/originals/ba/de/cd/badecded67a56f595b21a0c2b9566bb9.jpg);
+}
+
+/* border */
+
+</style>
+<body >
+	<div class="background">
+	<header>
+		<div class="heading">
+		<h1>WEDDING VOWES</h1>
+		<h2>Forever starts in this dreamy wedding venue</h2>
+		<p>Creating timeless memories in this magical wedding venue</p>
+		</div>
+	  </header>
+	  
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+<h1></h1>
+<div class="content"  >
+    <h2></h2>
+                <div style="margin-top: 50px;">
+				<div class="grid">
+					<figure class="effect-bubba">
+						<img src="https://www.weddingamalfi.com/wp-content/uploads/wedding-amalfi-articolo.jpg" alt="img02"/>
+						<figcaption>
+							<h2>AMALFI <span>COAST</span></h2>
+							<p>Amalfib <br> ITALY</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="effect-bubba">
+						<img src="https://cdn0.hitched.co.uk/vendor/3355/3_2/960/jpg/gherkin-wedding-250317-1007_4_193355-160795724097491.jpeg" alt="img16"/>
+						<figcaption>
+							<h2>THE<span>GHERKIN</span></h2>
+							<p>LONDAN <br> ENGLAND</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+                </div>	
+            	</div><br><br><br><br>
+
+
+                <div style="margin-top: 300px;">
+                <div class="grid">
+					<figure class="effect-bubba">
+						<img src="https://blissfulplans.com/wp-content/uploads/2023/08/Royal-Mansour.webp" alt="img02"/>
+						<figcaption>
+							<h2>royal <span>mansour</span></h2>
+							<p>MARRAKESH <br> MOROCOO</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="effect-bubba">
+						<img src="https://www.arabiaweddings.com/sites/default/files/styles/max980/public/tips/2016/04/jordan_wedding_destination.jpg?itok=qzlu7ivK"  alt="img16"/>
+						<figcaption>
+							<h2>west plam<span>Beach</span></h2>
+							<p>FLORIDA <br> US</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+                </div><br><br><br><br>
+
+                <div style="margin-top: 300px;">
+                <div class="grid">
+					<figure class="effect-bubba">
+						<img src="https://www.nataliejweddings.com/wp-content/uploads/2020/07/PARIS-WEDDING-PHOTOGRAPHY-CHAPELLE-EXPIATORE-Natalie-J-Weddings-47.jpg" style=" width: 905px;" alt="img02"/>
+						<figcaption>
+							<h2>Fresh <span>champ de mars</span></h2>
+							<p>PARIS <br>FRANCE</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="effect-bubba">
+						<img src="https://www.infinity-weddingsandevents.com/wp-content/uploads/2020/01/luxury-wedding-venue-in-italy-1400x905.jpg" alt="img16"/>
+						<figcaption>
+							<h2>villa san<span>michele</span></h2>
+							<p>FLORENCE <br> ITALY</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div></div><br><br><br><br>
+
+
+                <div style="margin-top: 300px;"></div>
+                <div class="grid">
+					<figure class="effect-bubba">
+						<img src="https://weddingsdegoa.com/wp-content/uploads/2024/05/Caravela-Beach-Resort-Goa-2.webp" alt="img02"/>
+						<figcaption>
+							<h2>caravela<span>Beach</span></h2>
+							<p>GOA<br> INDIA</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="effect-bubba">
+						<img src="https://www.shaadibaraati.com/ckfinder/userfiles/images/time%20of%20the%20wedding.jpg" alt="img16"/>
+						<figcaption>
+							<h2>villa<span>nautica</span></h2>
+							<p>MALDIVES</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div></div>
+                </div><br><br><br>
+				
+				
+
+
+				<div>
+					<a href="./menu.html" class="btn" style="background-color: cadetblue;margin-left: 400px;color: white; padding: 10px;">PREVIOUS</a>
+					<a href="./wedding read more.html" class="btn" style="background-color: cadetblue;margin-left:230px;color: white; padding: 10px;">MORE</a>
+					<a href="./ADVENTURE.html" class="btn" style="background-color:cadetblue;margin-left: 300px;color: white; padding: 10px;">NEXT</a>
+				  </div>
+
+				</div>
+</body>
+</html>

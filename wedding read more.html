@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-webkit-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-moz-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-o-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+body {
+    margin:0;
+    background-image: url(https://i.pinimg.com/originals/ba/de/cd/badecded67a56f595b21a0c2b9566bb9.jpg);
+}
+
+.category-name {
+    font-family: sans-serif;
+    width: -webkit-fill-available;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.card-category-2 ul, .card-category-3 ul, .card-category-4 ul, .card-category-5 ul  .card-category-6 ul {
+    padding: 0;
+}
+    
+.card-category-2 ul li, .card-category-3 ul li, .card-category-4 ul li, .card-category-5 ul li, .card-category-6 ul li {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card-category-2 ul li, .card-category-3 ul li {
+    margin: 10px 5px;
+}
+
+.card-category-1, .card-category-2, .card-category-3, .card-category-4, .card-category-5, .card-category-6 {
+    font-family: sans-serif;
+    margin-bottom: 45px;
+    text-align: center;
+}
+    .card-category-1 div, .card-category-2 div {
+        display:inline-block;
+    }
+
+    .card-category-1 > div, .card-category-2 > div:not(:last-child) {
+        margin: 10px 5px;
+        text-align: left;
+    }
+
+
+
+.img-card {
+        width:300px;
+        position: relative;
+        border-radius: 5px;
+        text-align: left;
+
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        -o-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);        
+    }
+
+        .img-card .card-image {
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 5px 5px 0px 0px;
+            height: 200px;
+        }
+
+        .img-card .card-image img {
+            width:100%;
+            border-radius: 5px 5px 0px 0px;
+            
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            transition: all 0.8s;
+        }
+
+        .img-card .card-image:hover img {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+        }        
+
+        .img-card .card-text {
+            padding: 0 15px 15px;
+            line-height: 1.5;   
+        }
+
+        .img-card .card-link {
+            padding: 20px 15px 30px;
+            width: -webkit-fill-available;
+        }
+
+            .img-card .card-link a {
+                text-decoration: none;
+                position: relative;
+                padding: 10px 0;
+            }
+
+            .img-card .card-link a:after {
+                top: 30px;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                width: 0;
+
+                -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            }
+
+            .img-card .card-link a:hover:after { 
+                width: 100%; 
+                left: 0; 
+            }        
+        
+        .img-card.iCard-style1 .card-title {
+            position: absolute;
+            font-family: 'Open Sans', sans-serif;
+            z-index: 1;
+            top: 10px;
+            left: 10px;
+            font-size: 30px;
+            color: #fff;
+        }
+        
+        .img-card.iCard-style1 .card-text {            
+            color: #795548;
+        }
+
+        .img-card.iCard-style1 .card-link a {
+            color: #FF9800;                
+        }
+
+        .img-card.iCard-style1 .card-link a:after {            
+            background: #FF9800;
+        }
+        .img{
+            height: 400px;
+            width: auto;
+        }
+       
+</style>
+<body>
+    <div class="card-category-2">
+            
+        <span class="category-name" style="margin-top: 50px;">WEDDING VOWES</span> <br/><br/>
+        
+        <ul>
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Public Library,US</span>
+                            <img src="https://www.brides.com/thmb/Dlsi94I_WNVT0fnmPA7UrzkiJyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__brides__public__brides-services__production__2017__01__17__587e5a1b136e615c2569650b_16-Glam-New-York-Public-Library-Wedding-Christian-Oth-Studio-4b5c333e9dd34662a4f42b5085d81bf2.JPG"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET: $300pp ($75,000 total).
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Villa Balbiano,Italy</span>
+                            <img src="https://www.wedinspire.com/wp-content/uploads/2020/06/LR_BandG_LakeComo_Lostinlove-889.jpg"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET:$30,000 to $100,000
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">The Historic Royal Palaces,England</span>
+                            <img src="https://cdn0.hitched.co.uk/vendor/2211/3_2/960/jpg/-52130-office_4_352211-170774276374503.jpeg"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                               BUDGET:$1,736 -$2,400
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Four Seasons Ocean Club,Bahamas</span>
+                            <img src="https://i0.wp.com/blog.shaadishop.co/wp-content/uploads/2020/02/Indian-wedding-venue-Southern-California-four-seasons-westlake-jewish-wedding-photography.jpg?ssl=1"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET:$53,550-$65,450 
+                            </p>
+                        </div>    
+                </div>                    
+            </li>   
+        </ul>
+    </div>
+    
+    <div class="card-category-2">
+        <ul>
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">The Little Nell,USA</span>
+                            <img src="https://images.squarespace-cdn.com/content/v1/599cc6f18419c2d82c825184/9b009308-a53d-41fd-ae2c-2379a84b405c/the-little-nell-wedding-312.jpg"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET: $60k-$270k
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Malibu Rocky Oaks Estate Vineyards,CA</span>
+                            <img src="https://www.theknot.com/tk-media/images/b3288b62-6b94-11e4-843f-22000aa61a3e~rs_1458.h?quality=60" height=""/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET:$15,000 - 50,000 
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Haiku Mill,Hawaii</span>
+                            <img src="https://images.squarespace-cdn.com/content/v1/5b04b5a6ec4eb7072300330c/1528916994100-6H0BAT848ZTDPOQPSX9X/haiku-mill-wedding-38.jpg"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET:$11,123 – $33,208
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">AMAN Venice,Italy</span>
+                            <img src="https://www.wedding-venice.com/images/wedding-blog/james-karen/015-bis-luxury-wedding-aman-venice-italy.jpg" />
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                               BUDGET: 15,000 and 25,000 euros 
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            
+        </ul>
+
+    </div>
+    
+    <br/>
+
+    <a href="./WEDDING.html" class="btn" style="color:black;margin-left: 48%;margin-bottom: 30px;background-color: rgb(129, 129, 164); padding: 10px;border-radius: 30px;">BACK</a>
+</body>
+<script>
+    function showText(toggleText) {
+    toggleText.classList.toggle("active");
+}
+</script>
+</html>

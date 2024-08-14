@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+    margin-top: 700px;
+    background-image: url(https://i.pinimg.com/originals/ba/de/cd/badecded67a56f595b21a0c2b9566bb9.jpg);
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper{
+	display: flex;
+	gap: 40px;
+}
+
+.card {
+	position: relative;
+	width: 250px;
+	height: 350px;
+}
+
+.face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: .5s;
+}
+
+.card .front {
+	transform: perspective(600px) rotateY(0deg);
+	box-shadow: 0 5px 10px #fff;
+}
+
+.card .front img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.text-h1 {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	color: #fff;
+	background: rgba(0, 0, 0, .4);
+	text-align: center;
+}
+
+.card .back {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	transform: perspective(600px) rotateY(180deg);
+	background: rgb(52, 55, 56);
+	padding: 15px;
+	color: WHITE;
+	text-align: center;
+	box-shadow: 0 5px 10px #fff;
+}
+.links {
+	border-top: 1px solid crimson;
+	height: 50px;
+	line-height: 50px;
+}
+
+.link-a {
+	color: crimson;
+}
+
+.card .back .text-h2 {
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+
+.card .back .text-p {
+	letter-spacing: 1px;
+}
+
+.card:hover .front {
+	transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+	transform: perspective(600px) rotateY(360deg);
+}
+
+ .btn:hover{
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+</style>
+<body>
+    
+    <title>Tarjetas Giratorias (flip card)</title>
+    <!-- INDIA -->
+     
+    <div id="india" style="margin-top:200px ;">
+        <h1 style="text-align: center;margin-top: 100px;"><span style="background-color: plum;" >GLOBAL JOURNEY</span></h1>
+        <h1 style="text-align: center;">INDIA</h1>
+
+	<div class="wrapper" style="margin-top:20px ;">
+
+		<div class="card">
+
+			<div class="face front">
+				<img src="https://www.planetware.com/wpimages/2019/11/india-best-places-to-visit-agra.jpg" alt="city">
+				<h1 class="text-h1">TAJ MAHAL</h1>
+			</div>
+
+			<div class="face back">
+				<h2 class="text-h2">TAJMAHAL</h2>
+				<p class="text-p">
+                DELHI</BR>INDIA<BR>PACKAGES AROUND $420 WITH AVAILABLITY OF ROOMS AND FOOD
+                </p>
+				<div class="links">
+					<a class="link-a" href="#">Details</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="card">
+
+			<div class="face front">
+				<img src="https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/08/16/Pictures/_dbca9ffa-a138-11e8-9345-8d51f8ed9678.jpg" alt="city">
+				<h1 class="text-h1">GOA</h1>
+			</div>
+
+			<div class="face back">
+				<h2 class="text-h2">GOA</h2>
+				<p class="text-p">
+                    KONKAN </BR>INDIA </BR> PACKAGES AROUND $715 WITH AVAILABILTY OF ROOMS AND FOODS
+                </p>
+				<div class="links">
+					<a class="link-a" href="#">Details</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="card">
+
+			<div class="face front">
+				<img src="https://content.r9cdn.net/rimg/dimg/a9/dd/d6b29241-city-44818-166a7453734.jpg?width=1366&height=768&xhint=1600&yhint=1049&crop=true" alt="city">
+				<h1 class="text-h1">MUNNAR</h1>
+			</div>
+
+			<div class="face back">
+				<h2 class="text-h2">MUNNAR</h2>
+				<p class="text-p">
+                KERELA</BR>INDIA</BR>PACKAGES AROUND $600 WITH AVAILABILTY OF ROOMS AND FOODS. 
+                </p>
+				<div class="links">
+					<a class="link-a" href="#">Details</a>
+				</div>
+			</div>
+
+		</div>
+
+        <div class="card">
+
+			<div class="face front">
+				<img src="https://karnatakatourism.org/wp-content/uploads/2020/06/Mysuru-Palace-banner-1920_1100.jpg" alt="city">
+				<h1 class="text-h1">MYSORE PALACE</h1>
+			</div>
+
+			<div class="face back">
+				<h2 class="text-h2">MYSORE PALACE</h2>
+				<p class="text-p">
+                </BR>KARNATAKA</BR>INDIA </BR> PACAKGES AROUND $300 WITH AVAILABILTY OF ROOMS FOODS.
+                </p>
+				<div class="links">
+					<a class="link-a" href="#">Details</a>
+				</div>
+			</div>
+
+		</div>
+
+
+        <div class="card">
+
+			<div class="face front">
+				<img src="https://img.onmanorama.com/content/dam/mm/en/travel/outside-kerala/images/2022/12/24/pondicherry-beach.jpg" alt="city">
+				<h1 class="text-h1">PONDICHERRY</h1>
+			</div>
+
+			<div class="face back">
+				<h2 class="text-h2">PONDICHERRY</h2>
+				<p class="text-p">
+                </BR>TAMILNADU</BR>INDIA</BR> PACKAGES AROUND $96 WITH AVAILABLITY OF ROOMS AND FOODS.
+                </p>
+				<div class="links">
+					<a class="link-a" href="#">Details</a>
+				</div>
+			</div>
+        </div>
+		</div><br><br><br><br><br><br><br><br>
+
+        <!-- FRANCE -->
+         <div id="france" style="margin-bottom:30px;"> 
+            <h1 style="text-align: center;">FRANCE</h1>  
+        <div class="wrapper">
+
+            <div class="card">
+    
+                <div class="face front">
+                    <img src="https://www.state.gov/wp-content/uploads/2023/07/shutterstock_667548661v2.jpg" alt="city">
+                    <h1 class="text-h1">EIFFEL</h1>
+                </div>
+    
+                <div class="face back">
+                    <h2 class="text-h2">EIFFEL</h2>
+                    <p class="text-p">
+                        PARIS </BR>FRANCE</BR> PACKAGES AROUND ONE WEEKS IS $2216 WITH AVAILABLITY OF ROOMS AND FOODS.
+                    </p>
+                    <div class="links">
+                        <a class="link-a" href="#">Details</a>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="card">
+    
+                <div class="face front">
+                    <img src="https://www.travelandleisure.com/thmb/karJ6n6Le4SXFvhplrcL8vzhCX0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-exterior-of-palace-VERSAILLES0124-779f044b4abd4178b86f57539a99ebd2.jpg" alt="city">
+                    <h1 class="text-h1">VERSAILLES</h1>
+                </div>
+    
+                <div class="face back">
+                    <h2 class="text-h2">VERSAILLES</h2>
+                    <p class="text-p">
+                    WEST PARIS </BR>FRANCE </BR> PACAKGES AROUND TWO WEEKS IS $2382 WITH AVAILABLITY OF ROMMS AND FOODS.
+                    </p>
+                    <div class="links">
+                        <a class="link-a" href="#">Details</a>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="card">
+    
+                <div class="face front">
+                    <img src="https://media.disneylandparis.com/d4th/en-usd/images/HD13302_2_2050jan01_world_disneyland-park-dlp-website-visual_5-2_tcm1861-248638.jpg?w=1920&f=webp" alt="city">
+                    <h1 class="text-h1">DISNEY LAND</h1>
+                </div>
+    
+                <div class="face back">
+                    <h2 class="text-h2">DISNEY LAND</h2>
+                    <p class="text-p">
+                        PARIS </BR>FRANCE</BR> PACKAGES AROUND SIX DAYS IS 1668  DOLLARS WITH AVAILABILTY OF ROOMS AND FOODS.
+                    </p>
+                    <div class="links">
+                        <a class="link-a" href="#">Details</a>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="card">
+    
+                <div class="face front">
+                    <img src="https://content.api.news/v3/images/bin/35f165cb4f4cf7c072b46822136b54f4" alt="city">
+                    <h1 class="text-h1">RIVIERA</h1>
+                </div>
+    
+                <div class="face back">
+                    <h2 class="text-h2">RIVIERA</h2>
+                    <p class="text-p">
+                        MEDITERRANEAN COASTLINE </BR> FRANCE <br> PACKAGES AROUND SIX DAYS IS $1453 WITH AVAILABILTY OF ROOMS AND FOODS.
+                    </p>
+                    <div class="links">
+                        <a class="link-a" href="#">Details</a>
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="card">
+    
+                <div class="face front">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFMg9DowK0kSNdNRUkv83IsTPGiJvaP_eHUA&s" alt="city">
+                    <h1 class="text-h1">TUILERIES GARDEN</h1>
+                </div>
+    
+                <div class="face back">
+                    <h2 class="text-h2">TUILERIES</h2>
+                    <p class="text-p">
+                        GARDEN IN PARIS <br>FRANCE <br>PACKAGES AROUND FIVE DAYS IS $1191 WITH AVAILABILTY OF ROOMS AND FOODS.
+
+                     </P>
+                    <div class="links">
+                        <a class="link-a" href="#">Details</a>
+                    </div>
+                </div>
+            </div>
+            </div><br><br><br><br><br><br><br><br>
+
+            <!-- SOUTH KOREA -->
+            <div id="italy">
+                <h1 style="text-align: center;">SOUTH KOREA</h1> 
+                <div class="wrapper">
+            
+                    <div class="card">
+            
+                        <div class="face front">
+                            <img src="https://www.kkday.com/en/blog/wp-content/uploads/kr_shutterstock_629824091.jpg" alt="city">
+                            <h1 class="text-h1">SEOL TOWER</h1>
+                        </div>
+            
+                        <div class="face back">
+                            <h2 class="text-h2">SEOUL TOWER</h2>
+                            <p class="text-p">
+                                SEOUL </BR>SOUTH KOREA </BR> PACKAGES AROUND SIX DAYS IS $2275 WITH AVAILABLITY OF ROOMS AMD FOODS.
+                                </P>
+                            <div class="links">
+                                <a class="link-a" href="#">Details</a>
+                            </div>
+                        </div>
+            
+                    </div>
+            
+                    <div class="card">
+            
+                        <div class="face front">
+                            <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/11/c7/32/2b.jpg" alt="city">
+                            <h1 class="text-h1">NAMI ISLAND</h1>
+                        </div>
+            
+                        <div class="face back">
+                            <h2 class="text-h2">NAMI ISLAND</h2>
+                            <p class="text-p">
+                             SEOUL</BR>SOUTH KOREA </BR>   PACKAGES AROUND FIVE TO SEVEN  DAYS IS $1427 WITH AVAILABLITY OF ROOMS AMD FOODS.
+                            </p>
+                            <div class="links">
+                                <a class="link-a" href="#">Details</a>
+                            </div>
+                        </div>
+            
+                    </div>
+            
+                    <div class="card">
+            
+                        <div class="face front">
+                            <img src="https://cdn2.veltra.com/ptr/20190923063926_45903472_13307_0.jpg?imwidth=800&impolicy=custom" alt="city">
+                            <h1 class="text-h1">SEORAKSAN NATIONAL PARK</h1>
+                        </div>
+            
+                        <div class="face back">
+                            <h2 class="text-h2">NATIONAL PARK</h2>
+                            <p class="text-p">
+                                SEOUL </BR>SOUTH KOREA </BR>PACKAGES AROUND SEVEN DAYS IS $1667  WITH AVAILABLITY OF ROOMS AND FOODS.
+                               </P>
+                            <div class="links">
+                                <a class="link-a" href="#">Details</a>
+                            </div>
+                        </div>
+            
+                    </div>
+            
+                    <div class="card">
+            
+                        <div class="face front">
+                            <img src="https://adventure.lotteworld.com/common_en/images/icon/mainCon1_img1.jpg" alt="city">
+                            <h1 class="text-h1">LOTTE WORLD</h1>
+                        </div>
+            
+                        <div class="face back">
+                            <h2 class="text-h2">LOTTE</h2>
+                            <p class="text-p">
+                                BUSAN </BR>SOUTH KOREA </BR>PACKAGES AROUND FIVE TO SIX DAYS IS $1429  WITH AVAILABLITY OF ROOMS AND FOODS.
+                                </P>
+                            <div class="links">
+                                <a class="link-a" href="#">Details</a>
+                            </div>
+                        </div>
+            
+                    </div>
+            
+            
+                    <div class="card">
+            
+                        <div class="face front">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/88/a2/3a/caption.jpg?w=1400&h=1400&s=1" alt="city">
+                            <h1 class="text-h1">BUSAN</h1>
+                        </div>
+            
+                        <div class="face back">
+                            <h2 class="text-h2">BUSAN</h2>
+                            <p class="text-p">
+                                BUSAN </BR>SOUTH KOREA </BR>PACKAGES AROUND FIVE DAYS IS $1191  WITH AVAILABLITY OF ROOMS AND FOODS.
+                            
+                                </P>
+                            <div class="links">
+                                <a class="link-a" href="#">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div><br><br><br><br><br><br><br><br>
+            
+
+            <!-- AUSTRLIA -->
+            <div id="aus">
+                <h1 style="text-align: center;">AUSTRALIA</h1> 
+            <div class="wrapper">
+
+                <div class="card">
+        
+                    <div class="face front">
+                        <img src="https://ychef.files.bbci.co.uk/1280x720/p0gp95cq.jpg" alt="city">
+                        <h1 class="text-h1">OPERAHOUSE</h1>
+                    </div>
+        
+                    <div class="face back">
+                        <h2 class="text-h2">OPERAHOUSE</h2>
+                        <p class="text-p">
+                            PORT JACKSON </BR>AUSTRALIA </BR>PACKAGES AROUND SEVEN DAYS IS $1786 WITH AVAILABLITY OF ROOMS AND FOODS.</p>
+                        <div class="links">
+                            <a class="link-a" href="#">Details</a>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div class="card">
+        
+                    <div class="face front">
+                        <img src="https://cdn.britannica.com/33/155133-050-962670B6/Sydney-Harbour-Bridge-Australia-Syndey.jpg" alt="city">
+                        <h1 class="text-h1">HARBOUR BRIDGE</h1>
+                    </div>
+        
+                    <div class="face back">
+                        <h2 class="text-h2">HARBOUR BRIDGE</h2>
+                        <p class="text-p">
+                           SDNEY </BR>AUSTRALIA </BR> PACKAGES AROUND SEVEN DAYS IS $2262 WITH AVAILABLITY OF ROOMS AND FOODS.
+                        <div class="links">
+                            <a class="link-a" href="#">Details</a>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div class="card">
+        
+                    <div class="face front">
+                        <img src="https://www.holidify.com/images/cmsuploads/compressed/Gangotri_national_park_2_20190228145401.jpg" alt="city">
+                        <h1 class="text-h1">KAKADU </h1>
+                    </div>
+        
+                    <div class="face back">
+                        <h2 class="text-h2">KAKADU PARK</h2>
+                        <p class="text-p">
+                            KAKADU HWY,DARWIN </BR>AUSTRALIA </BR> PACKAGES AROUND FIVE DAYS IS $2144 WITH AVAILABILTY OF ROOMS AND FOODS.
+                           </P>
+                        <div class="links">
+                            <a class="link-a" href="#">Details</a>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div class="card">
+        
+                    <div class="face front">
+                        <img src="https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt3TlRka09UQTROQzA0TkdSa0xUUXlOREV0WVdNMU9TMDBaREEyTnpJNU9EazFNR0lHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--c9faaeb033a7e1081e8779bb9befd2f66ba702fa/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMb0Eya0NXQUk9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--5c7b32c6a74ee88f2f4469ce3a4ae709d1994efe/9022d12d-56c4-441c-ba61-e2a44c09fb76.jpg" alt="city">
+                        <h1 class="text-h1">ROYAL BOTANICAL GARDEN</h1>
+                    </div>
+        
+                    <div class="face back">
+                        <h2 class="text-h2">BOTANICAL GARDEN</h2>
+                        <p class="text-p">
+                            
+                            SDNEY </BR>AUSTRALIA </BR> PACKAGES AROUND FIVE DAYS IS $1667 WITH AVAILABLITY OF ROOMS AND FOODS.
+                        <div class="links">
+                            <a class="link-a" href="#">Details</a>
+                        </div>
+                    </div>
+        
+                </div>
+        
+        
+                <div class="card">
+        
+                    <div class="face front">
+                        <img src="https://www.visitmelbourne.com/-/media/images/great-ocean-road/things-to-do/nature-and-wildlife/beaches-and-coastlines/lorne-gor/lorne-great-ocean-road_gor_u_1233198_1150x863.jpg?ts=20240503050553" alt="city">
+                        <h1 class="text-h1">GREAT OCEAN ROAD </h1>
+                    </div>
+        
+                    <div class="face back">
+                        <h2 class="text-h2">GREAT OCEAN ROAD</h2>
+                        <p class="text-p">
+                            VICTORIA </BR>AUSTRALIA </BR> PACKAGES AROUND FIVES DAYS IS $1786 WITH AVAILABLITY OF ROOMS AND FOODS.
+                        <div class="links">
+                            <a class="link-a" href="#">Details</a>
+                        </div>
+                    </div>
+                </div>
+                </div><br><br><br><br><br><br><br><br>
+
+
+                <!-- JAPAN -->
+                <div id="japan">
+                    <h1 style="text-align: center;">JAPAN</h1> 
+                    <div class="wrapper">
+                
+                        <div class="card">
+                
+                            <div class="face front">
+                                <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000146/img/basic/a0000146_main.jpg?20201224150509&q=80" alt="city">
+                                <h1 class="text-h1">TOKYO</h1>
+                            </div>
+                
+                            <div class="face back">
+                                <h2 class="text-h2">TOKYO TOWER</h2>
+                                <p class="text-p">
+                                    TOKYO </BR>JAPAN </BR>PACKAGES AROUND FIVE DAYS $1667 WITH AVAILABLITY OF ROOMS AND FOODS.
+                                <div class="links">
+                                    <a class="link-a" href="#">Details</a>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="card">
+                
+                            <div class="face front">
+                                <img src="https://japanupclose.web-japan.org/files/100462026.jpeg" alt="city">
+                                <h1 class="text-h1">MOUNT FUJI</h1>
+                            </div>
+                
+                            <div class="face back">
+                                <h2 class="text-h2">MOUNT FUJI</h2>
+                                <p class="text-p">
+                                    SOUTHWEST OF TOKYO </BR>JAPAN </BR>PACKAGES AROUND FIVE DAYS IS $1429 WITH AVAILABLITY OF ROOMS AND FOODS.
+                                <div class="links">
+                                    <a class="link-a" href="#">Details</a>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="card">
+                
+                            <div class="face front">
+                                <img src="https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2016/07/Tokyo-Imperial-Palace.jpg" alt="city">
+                                <h1 class="text-h1">IMPERIAL TOWER</h1>
+                            </div>
+                
+                            <div class="face back">
+                                <h2 class="text-h2">IMPERIAL TOWER</h2>
+                                <p class="text-p">
+                                   CHIYODA CITY,TOKYO</BR>JAPAN </BR> PACKAGES AROUND FIVE DAYS IS $1429 WITH AVAILABILITY OF ROOMS AND FOODS.
+                                <div class="links">
+                                    <a class="link-a" href="#">Details</a>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="card">
+                
+                            <div class="face front">
+                                <img src="https://asset.japan.travel/image/upload/v1648108505/okinawa/H_00376_001.jpg" alt="city">
+                                <h1 class="text-h1">AQUARIUM</h1>
+                            </div>
+                
+                            <div class="face back">
+                            <h2 class="text-h2"> OSAKA AQUARIUM</h2>
+                                <p class="text-p">
+                                    OSAKA </BR>JAPAN </BR>PACKAGES AROUND SEVEN DAYS IS $2144 WITH AVAILABLITY OF ROOMS AND FOODS.
+                                <div class="links">
+                                    <a class="link-a" href="#">Details</a>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                
+                        <div class="card">
+                
+                            <div class="face front">
+                                <img src="https://tdrexplorer.com/wp-content/uploads/2021/08/tokyo-disneyland-cinderella-castle-nighttime-1024x1024.jpg" alt="city">
+                                <h1 class="text-h1">DISNEY LAND</h1>
+                            </div>
+                
+                            <div class="face back">
+                                <h2 class="text-h2">DISNEY LAND</h2>
+                                <p class="text-p">
+                                   CHIBA</BR>JAPAN </BR>PACKAGES AROUND SEVEN DAYS IS $2382 WITH AVAILABLITY OF ROOMS AND FOODS.
+                                <div class="links">
+                                    <a class="link-a" href="#">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div><br><br><br><br><br><br><br><br>
+
+                            <a href="./menu.html" class="btn" style="background-color: grey;margin-left: 500px; padding: 10px;color: black;border-radius: 20px;">PREVIOUS</a>
+                            <a href="./COASTAL.html" class="btn" style="background-color: grey;margin-left: 300px; padding: 10px;color: black;border-radius: 20px;">NEXT</a>
+</div>
+</body>
+
+<script>
+   
+
+</script>
+
+
+</html>

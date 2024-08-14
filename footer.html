@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-image: url(https://i.pinimg.com/originals/ba/de/cd/badecded67a56f595b21a0c2b9566bb9.jpg);">
+  
+
+<div class="card" style="background-image: url('https://static.tripcdn.com/packages/flight/static-image-online/latest/flight_v2/h5/bg_flights_v2.png');"width="400px">
+  <h2>Scroll Now<br>To know more about EmiGreat Holiday</h2>
+  <button><a href="#footer">Scroll</a></button>
+</div>
+<footer id="footer">
+  <div class="col col1">
+    <h3>Follow us</h3>
+    <p>Made by EmiGreaters</p>
+    <div class="social">
+      <div class="insta">
+      <a href="https://codepen.io/Juxtopposed" target="_blank" class="link"><i class="fa-brands fa-instagram"></i></a></div>
+      <div class="face">
+      <a href="https://twitter.com/juxtopposed" target="_blank" class="link"><i class="fa-brands fa-facebook"></i></a></div>
+      <div class="youtube">
+      <a href="https://youtube.com/@juxtopposed" target="_blank" class="link"><img src="https://assets.codepen.io/9051928/youtube_1.png" alt="" /></a></div>
+    </div>
+    <p style="color: #f7f5f5; font-size: smaller">EMIGREAT HOLIDAYS © All Rights Reserved</p>
+  </div>
+  <div class="col col2" >
+    <p><a href="./front.html"><i class="fa-solid fa-house-circle-check" style="color: #fff;"></i> Home</a></p>
+    <p><a href="./menu.html"><i class="fa-solid fa-box-archive" style="color: #fff;"></i> Packages</a></p>
+    <p><a href="./contact.html"><i class="fa-solid fa-phone" style="color: #fff;"></i> Contact</a></p>
+    <p><a href="./about.html"><i class="fa-solid fa-note-sticky" style="color: #fff;"></i> About</a></p>
+  </div>
+  <div class="col col3">
+    <p><a href="./payment.html"><i class="fa-regular fa-credit-card" style="color: #ffffff;"></i> Payment</a></p>
+    <p><a href="./terms and condition.html"><i class="fa-brands fa-servicestack" style="color: #fff;"></i> Terms & Services</a></p>
+    <p><a href="./copy.html"><i class="fa-solid fa-copyright" style="color: #fff;"></i> Copyright Issue</a></p>
+    <p><a href="./feedback.html"><i class="fa-brands fa-teamspeak" style="color: #fff;"></i>Review</a></p>
+  </div>
+  <div class="backdrop"></div>
+  
+</footer>
+</body>
+<style>
+  @import url("https://fonts.googleapis.com/css?family=IBM%20Plex%20Sans:500|IBM%20Plex%20Sans:300");
+
+  :root {
+    --m: 4rem;
+  }
+  
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+    font-family: "IBM Plex Sans";
+    font-weight: 300;
+  
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    height: 190vh;
+    margin: 0;
+    color: #f5f1f1;
+    font-size: calc(0.3 * var(--m));
+  }
+  
+  h2 {
+    font-weight: 500;
+    text-align: center;
+    font-size: var(--m);
+    margin: 0;
+  }
+  
+  h3 {
+    font-weight: 500;
+    font-size: calc(0.6 * var(--m));
+    margin: 0;
+  }
+  
+  .card {
+    height: calc(8 * var(--m));
+    width: calc(12 * var(--m));
+    color: black;
+    border-radius: calc(0.5 * var(--m));
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--m);
+  
+    position: fixed;
+    margin: calc(2 * var(--m)) calc(5 * var(--m)) calc(5 * var(--m))
+      calc(5 * var(--m));
+  }
+  
+  button {
+    background-color: #000;
+    font-size: calc(0.4 * var(--m));
+    border: none;
+    color: #e5e5e5;
+    font-family: "IBM Plex Sans";
+    font-weight: 400;
+    padding: calc(0.35 * var(--m)) calc(0.8 * var(--m));
+    border-radius: calc(0.3 * var(--m));
+  }
+  
+  footer {
+    margin-top: 80vh;
+    z-index: 500;
+    width: 100%;
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 5rem 2vw;
+    position: relative;
+  }
+  
+  footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0) 5%,
+      rgba(0, 0, 0, 0.3) 20%,
+      rgba(0, 0, 0, 0.6) 30%,
+      rgba(0, 0, 0, 0.8) 40%,
+      rgba(0, 0, 0, 1) 50%,
+      rgb(0, 0, 0)
+    );
+    z-index: -7;
+  }
+  
+  .backdrop {
+    z-index: -5;
+    position: absolute;
+    inset: 0;
+  
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  
+    mask-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.8) 20%,
+      rgba(0, 0, 0, 1) 30%,
+      rgb(0, 0, 0)
+    );
+  
+    -webkit-mask-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.8) 20%,
+      rgba(0, 0, 0, 1) 30%,
+      rgb(0, 0, 0)
+    );
+  }
+  
+  .col {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
+    width: 28%;
+  }
+  
+  .col2,
+  .col3 {
+    background-color: #121212;
+    border-radius: calc(0.5 * var(--m));
+  }
+  
+  img {
+    height: calc(0.3 * var(--m));
+    object-fit: cover;
+  }
+  
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .link {
+    width: calc(0.8 * var(--m));
+    height: calc(0.8 * var(--m));
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: calc(0.1 * var(--m));
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    :root {
+      --m: 3rem;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    footer {
+      flex-direction: column;
+      padding: 5rem 20vw;
+    }
+    .col {
+      width: 100%;
+    }
+  }
+  .insta a:hover{
+    transition: 0.5s;
+    background-color:rgb(178, 23, 101);
+  }
+
+  .face a:hover{
+    transition: 0.5s;
+    background-color:blue;
+  }
+
+  .youtube a:hover{
+    transition: 0.5s;
+    background-color: red;
+  }
+  .col2 a:hover{
+    transition: 0.5s;
+    color:rgb(95, 93, 93);
+  }
+  .col3 a:hover{
+    transition: 0.5s;
+    color: rgb(95, 93, 93);
+  }
+</style>
+</html>

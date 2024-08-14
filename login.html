@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Raisoni.tk</title>
+  
+  
+	
+	<!-- glogin -->
+	<meta name="google-signin-client_id" content="904627498800-hh5obo9a0meeuenbasumje9prleecj4i.apps.googleusercontent.com">
+	<script src="http://yashnayak.tk/rtkgapps/jquery.min.js"></script>
+	<script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
+	<!-- glogin -->
+
+	<!-- Include our stylesheet -->
+	<link href="http://yashnayak.tk/rtkgapps/assets/css/styles.css" rel="stylesheet"/>
+
+  
+  <style>
+
+
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #daddc5;
+            margin: 0;
+        }
+        .login-container {
+            
+            padding: 20px;
+            border-radius: 5px;
+            
+            width: 300px;
+            color: white;
+            margin-bottom: 8%;
+            
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        small {
+            color: red;
+            visibility: hidden;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        .error input {
+            border-color: red;
+        }
+        .success input{
+            border-color: #4cae4c;
+        }
+
+        .error small {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body style="background-image: url('https://lp-cms-production.imgix.net/2021-10/Woman%20walking%20on%20a%20bridge%20to%20Buddhist%20templae%20in%20Thailand%20during%20sunset%20Kiszon%20Pascal%20GettyImages-1135361816%20rfc.jpg');background-repeat: no-repeat;background-size: cover;"
+    <div>
+        <h2  style="font-size: 30px;"><i style="color:red ;" class="fa-solid fa-bullhorn"></i>    Before Seeing The Menu Page,<br>You Should Login <br><br><i class="fa-solid fa-arrow-down"></i></h2>
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Email ID</label>
+                <input type="text" id="username" name="username">
+                <small>Error message</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <small>Error message</small>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div>
+      <a href="./front.html"  ><h4    style="margin-bottom: 50%;"><i style="color: #fff;" class="fa-solid fa-arrow-left"></i> <span style="color: #fff;" style="font-size: 80px;" >    Back</span></h4></a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById('username');
+            const password = document.getElementById('password');
+            const usernameValue = username.value.trim();
+            const passwordValue = password.value.trim();
+            
+            let isValid = true; // Track overall form validity
+            
+            // Username validation
+            if (usernameValue === '') {
+                setError(username, 'Username cannot be empty');
+                isValid = false;
+                 // Set validity to false if error occurs
+            }
+            else if (usernameValue !='@gmail.com') {
+                setError(username, 'Invalid Email'); 
+                
+                }
+            else {
+                setSuccess(username);
+            }
+    
+            // Password validation
+            if (passwordValue === '') {
+                setError(password, 'Password cannot be empty');
+                isValid = false; // Set validity to false if error occurs
+            } else if (passwordValue.length < 8) {
+                setError(password, 'Password must be at least 8 characters'); // Check for minimum length
+                isValid = false; // Set validity to false if error occurs
+            } else {
+                setSuccess(password);
+            }
+    
+            // Redirect only if both fields are valid
+            if (isValid) {
+                alert('Login successful');
+                // Debugging: Check if the URL is correct
+                console.log('Redirecting to menu.html...');
+                window.location.href = 'menu.html'; // Redirect to menu page
+            }
+        });
+    
+        function setError(element, message) {
+            const formGroup = element.parentElement;
+            formGroup.className = 'form-group error';
+            const small = formGroup.querySelector('small'); // Find the small tag for error message
+            small.innerText = message; // Set error message
+        }
+    
+        function setSuccess(element) {
+            const formGroup = element.parentElement;
+            formGroup.className = 'form-group success'; // Set class for success
+            const small = formGroup.querySelector('small'); // Clear previous error message
+            small.innerText = ''; // Clear any existing error message
+        }
+    </script>
+    
+</body>
+</html>

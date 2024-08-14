@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #454545;
+  font-family: Arial, Helvetica, sans-serif;
+}
+  
+
+.slider-container {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  border: 5px solid lightgray; 
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position:absolute;
+  bottom: 0; 
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+button {
+  position: absolute;
+  bottom: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background: #0d7df5;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+button:hover {
+  background: #f99f3e;
+}
+
+.previous-btn {
+  left: 10px;
+}
+
+
+.next-btn {
+  right: 10px;
+}
+.bottom{
+      margin-top: 700px; 
+}
+
+</style>
+<body>
+  <div id="heading">
+  <h1 style="text-align: center;margin-bottom: 600px;">SEASON</h1>
+  </div>
+    <div class="slider-container">
+        <img src="https://www.tripsavvy.com/thmb/vIHNRZdumJG1f8DYTs90ihH3ErQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/1280px-Puerto_Rico_Beaches_01-5936a9855f9b589eb4267b48.jpg " alt="JANUARY">
+        <img src="https://a.loveholidays.com/media-library/~production/02a8ea96a7df82aa5419c408b3e17079aa55390b-5048x2524.jpg " alt="FEBRAURY">
+        <img src="https://i.levelupp.com/trip/bhutan-blossom-min.jpg " alt="MARCH">
+        <img src=" https://cdn-hombp.nitrocdn.com/rGMqKntVNYZMNQRhNoFbeETwWHdNWiGb/assets/images/optimized/rev-5512f87/sowherenext.co/wp-content/uploads/2024/02/Cherry-Blossom.jpg" alt="APRIL">
+        <img src=" https://lp-cms-production.imgix.net/2021-10/Woman%20walking%20on%20a%20bridge%20to%20Buddhist%20templae%20in%20Thailand%20during%20sunset%20Kiszon%20Pascal%20GettyImages-1135361816%20rfc.jpg" alt="MAY">
+        <img src="https://www.holidify.com/images/cmsuploads/compressed/23263c3b94205afdda938848c0a29388-1024x576_20220509143504.jpeg" alt="JUNE">
+        <img src=" https://static.toiimg.com/photo/64465753/.jpg" alt="JULY">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/0*LnoJQjCEY1ucSZKU.jpg" alt="AUGUST">
+        <img src="https://www.exploretheroadwithdonnamarie.com/wp-content/uploads/2022/03/image_6483441-1024x751.jpg" alt="SEPTEMBER">
+        <img src=" https://blog-content.ixigo.com/wp-content/uploads/2017/10/shutterstock_711159319.jpg" alt="OCTOBER">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrmrMc9wGjLLzXMPnKqx7Oa34NvUT1_0ad5g&s " alt="NOVEMBER">
+        <img src="https://images.saymedia-content.com/.image/t_share/MjA1MjYyNzEyODk5MzgwNDY2/season-names-in-hindi-for-english-readers.jpg " alt="DECEMBER">
+        <div class="caption"></div>
+        <button class="previous-btn">＜</button>
+        <button class="next-btn">＞</button>
+    </div>
+
+    <div id="bottom">
+      <a href="./menu.html" class="btn" style="background-color: cadetblue;margin-left: 400px;color: white; padding: 10px;">PREVIOUS</a>
+      <a href="./saeasonal read more.html" class="btn" style="background-color: cadetblue;margin-left:230px;color: white; padding: 10px;">MORE</a>
+      <a href="./menu.html" class="btn" style="background-color:cadetblue;margin-left: 300px;color: white; padding: 10px;">NEXT</a>
+      </div>
+</body>
+<script>
+const images = document.querySelectorAll("img");
+const caption = document.querySelector(".caption");
+const prevBtn = document.querySelector(".previous-btn");
+const nextBtn = document.querySelector(".next-btn");
+const totalImages = images.length;
+let imageIndex = 0;
+
+
+window.addEventListener("load", () => {
+  updateSlider();
+});
+
+
+nextBtn.addEventListener("click", () => {
+  imageIndex++;
+  if (imageIndex > totalImages - 1) {
+    imageIndex = 0;
+  }
+  updateSlider();
+});
+
+
+prevBtn.addEventListener("click", () => {
+  imageIndex--;
+  if (imageIndex < 0) {
+    imageIndex = totalImages - 1;
+  }
+  updateSlider();
+});
+
+
+function updateSlider() {
+  images.forEach((image, index) => {
+    if (index === imageIndex) {
+      image.style.display = "block";
+      caption.innerHTML = image.alt;
+    } else {
+      image.style.display = "none";
+    }
+  });
+}
+
+</script>
+</html>

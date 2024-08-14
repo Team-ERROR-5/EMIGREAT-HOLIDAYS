@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<style>
+  form h1{
+    font-weight: 500;
+  }
+  label{
+    font-size: x-large;
+  }
+</style>
+<body>
+   
+        <form class="last">
+          
+          <h1 style="text-align: center;">EmiGreat Holidays</h1>
+          <h2 style="text-align: center;">Payment Form</h2>
+          <h1>Pay now</h1>
+          <div class="input-box">
+            <select id="card-type">
+              <option>Visa</option>
+              <option>Mastercard</option>
+              <option>Paytm Pay</option>
+              <option>PhonePe</option>
+              <option>GPay</option>
+            </select>
+            <label for="card-type">Card Type</label>
+          </div>
+          <div class="input-box">
+            <input type="text" id="full-name" placeholder="John Smith" />
+            <i class="fa fa-check"></i>
+            <label for="full-name">Full Name</label>
+          </div>
+          <div class="input-box">
+            <input type="text" id="card-number" placeholder="0000 0000 0000 0000" />
+            <i class="fa fa-check"></i>
+            <label for="card-number">Card Number</label>
+          </div>
+          <div class="input-box fifty">
+            <input type="text" id="card-exp" placeholder="12/18" />
+            <i class="fa fa-check"></i>
+            <label for="card-exp">Expiration Date</label>
+          </div>
+          <div class="input-box fifty-last">
+            <input type="text" id="card-cvv" placeholder="CVV2" />
+            <i class="fa fa-check"></i>
+            <label for="card-cvv">Security Code <span class="help"><a href="#"></a></span></label>
+          </div>
+          <div class="input-box">
+            <input type="text" id="full-name" placeholder=" Only in dollars eg:$100.00" />
+            <i class="fa fa-check"></i>
+            <label for="full-name">Advanced Amount</label>
+          </div>
+          </form>
+          <form action="success.html">
+            <div class="green">
+         <input type="submit" value="Pay Now">
+        </div>
+        </form>
+      
+       
+      </div>
+</body>
+<style>
+.green input{
+  background-color: #0cb10c
+}
+
+    @import url('//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
+
+.last {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  background-image: url('https://img.freepik.com/free-photo/christmas-travel-concept-with-airplane_23-2149573122.jpg?t=st=1723557522~exp=1723561122~hmac=b5777e7a6b12e0fc69e4e8e5e41e40c6ef86570e8023c0c512c0ad98173092f8&w=996');
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  color: black;
+  font-size: 11px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.fifty {
+  float: left;
+  width: 47%;
+}
+
+.fifty-last {
+  float: right;
+  width: 47%;
+}
+
+
+
+aside {
+  padding: 10px 0;
+}
+
+.divider {
+  border-bottom: 1px solid lighten(black, 25%);
+  max-width: 65%;
+  margin: 0 auto -18px;
+}
+
+.timeline {
+  display: flex;
+  li {
+    flex: 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  i {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 1px 2px 1px 0px rgba(0,0,0,0.3);
+    display: inline-block;
+  }
+  span {
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 12px;
+    text-align: center;
+    line-height: 1.5em;
+  }
+}
+
+  .timeline-done {
+    border: 1px solid rgb(82, 7, 33);
+    font-size: 20px;
+    color: rgb(82, 7, 33);
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  i.timeline-active {
+    background: rgb(82, 7, 33);
+    + span { color:rgb(82, 7, 33); }
+  }
+
+form {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.input-box { position: relative; }
+
+select,
+input {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  font-size: 18px;
+  color:rgb(82, 7, 33);
+  padding: 10px;
+  transition: all 250ms ease;
+  &:focus {
+    border: 2px solid rgb(82, 7, 33);
+    box-shadow: 1px 2px 3px 0 rgba(0,0,0,0.5);
+    outline: none;
+  }
+}
+
+input + i:before {
+  font-size: 20px;
+  color: rgb(82, 7, 33);
+  position: absolute;  
+  top: 12px;
+  right: 8px;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+input.approved + i:before {
+  opacity: 1;
+}
+
+select {
+   width: 100%;
+   border: 0;
+   border-radius: 0;
+   height: 40px;
+}
+
+label {
+  margin: 5px 0 20px 10px;
+  display: inline-block;
+}
+
+#sub {
+  margin-top: 10px;
+  border: 3px solid black;
+  padding: 10px 15px;
+  font-size: 18px;
+  color: rgb(82, 7, 33);
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+  transition: all 250ms ease;
+  &:hover {
+    color: white;
+    border-color: white;
+  }
+}
+
+.help { position: absolute; top: 50px; right: 0; }
+#sub{
+  margin-right: 180px;
+  
+}
+#sub a{
+  text-decoration: none;
+}
+#sub:hover{
+  background-color: rgb(6, 176, 6);
+ 
+}
+h1 {
+  font-weight: 600;
+}
+</style>
+<script>
+    (document).ready(function() {
+  ('input').on('keyup', function() {
+    if ((this).val().length > 2) {
+      (this).addClass('approved');
+    }
+  });
+  ('input').on('blur', function() {
+    if ((this).val().length < 2) {
+      (this).removeClass('approved');
+    }
+  });
+});
+</script>
+</html>

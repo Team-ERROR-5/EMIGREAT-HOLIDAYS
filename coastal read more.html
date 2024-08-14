@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-webkit-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-moz-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-o-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+body {
+    margin:0;
+    background-image: url(https://i.pinimg.com/originals/ba/de/cd/badecded67a56f595b21a0c2b9566bb9.jpg);
+}
+
+.category-name {
+    font-family: sans-serif;
+    width: -webkit-fill-available;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.card-category-2 ul, .card-category-3 ul, .card-category-4 ul, .card-category-5 ul  .card-category-6 ul {
+    padding: 0;
+}
+    
+.card-category-2 ul li, .card-category-3 ul li, .card-category-4 ul li, .card-category-5 ul li, .card-category-6 ul li {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card-category-2 ul li, .card-category-3 ul li {
+    margin: 10px 5px;
+}
+
+.card-category-1, .card-category-2, .card-category-3, .card-category-4, .card-category-5, .card-category-6 {
+    font-family: sans-serif;
+    margin-bottom: 45px;
+    text-align: center;
+}
+    .card-category-1 div, .card-category-2 div {
+        display:inline-block;
+    }
+
+    .card-category-1 > div, .card-category-2 > div:not(:last-child) {
+        margin: 10px 5px;
+        text-align: left;
+    }
+
+
+
+.img-card {
+        width:300px;
+        position: relative;
+        border-radius: 5px;
+        text-align: left;
+
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        -o-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);        
+    }
+
+        .img-card .card-image {
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 5px 5px 0px 0px;
+            height: 200px;
+        }
+
+        .img-card .card-image img {
+            width:100%;
+            border-radius: 5px 5px 0px 0px;
+            
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            transition: all 0.8s;
+        }
+
+        .img-card .card-image:hover img {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+        }        
+
+        .img-card .card-text {
+            padding: 0 15px 15px;
+            line-height: 1.5;   
+        }
+
+        .img-card .card-link {
+            padding: 20px 15px 30px;
+            width: -webkit-fill-available;
+        }
+
+            .img-card .card-link a {
+                text-decoration: none;
+                position: relative;
+                padding: 10px 0;
+            }
+
+            .img-card .card-link a:after {
+                top: 30px;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                width: 0;
+
+                -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            }
+
+            .img-card .card-link a:hover:after { 
+                width: 100%; 
+                left: 0; 
+            }        
+        
+        .img-card.iCard-style1 .card-title {
+            position: absolute;
+            font-family: 'Open Sans', sans-serif;
+            z-index: 1;
+            top: 10px;
+            left: 10px;
+            font-size: 30px;
+            color: #fff;
+        }
+        
+        .img-card.iCard-style1 .card-text {            
+            color: #795548;
+        }
+
+        .img-card.iCard-style1 .card-link a {
+            color: #FF9800;                
+        }
+
+        .img-card.iCard-style1 .card-link a:after {            
+            background: #FF9800;
+        }
+        .img{
+            height: 400px;
+            width: auto;
+        }
+       
+</style>
+<body>
+    <div class="card-category-2">
+            
+        <span class="category-name" style="margin-top: 50px;">COASTAL</span> <br/><br/>
+        
+        <ul>
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Santorini,Greece</span>
+                            <img src="https://res.cloudinary.com/enchanting/q_70,f_auto,w_600,h_400,c_fit/ymt-web/2023/01/600x400-Santorini20Greece20Sunset.jpg"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET:890-1250 Euros
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Carmel,USA</span>
+                            <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_200,q_60,w_300/v1/clients/montereycounty16/Carmel_Beach_Evening_Sky_0384bf1c-0416-4fc0-8183-1a9191b22ebb.jpg"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET: $53,550-$65,450.
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Reine,Norway</span>
+                            <img src="https://www.switchbacktravel.com/sites/default/files/image_fields/field_imgs_inline/Reinebringen%20hike%20Lofoten.jpg"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                               BUDGET:$1,386 - $2,772  
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Scarborough,England</span>
+                            <img src="https://i.pinimg.com/736x/47/b2/cc/47b2cc8302802ed8f8e1bc9b923b7182.jpg"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET: £100 - £150 
+                            </p>
+                        </div>    
+                </div>                    
+            </li>   
+        </ul>
+    </div>
+    
+    <div class="card-category-2">
+        <ul>
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Boulders,South Africa</span>
+                            <img src="https://www.onegirlwholeworld.com/wp-content/uploads/2024/04/boulders_beach_penguins_IMG_7092.jpg"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET: Rs.1,20,250 to 7,97,334.
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Cadaques, Spain</span>
+                            <img src="https://miro.medium.com/v2/resize:fit:2000/1*MWxyK1RNW-5AAHrjqXHAZQ.jpeg" height=""/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET: $1,736 -$2,400
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Hidden beach,Philippines</span>
+                            <img src="https://images.unsplash.com/photo-1695051702427-1c24ce3682e7?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bG9uZWx5JTIwYmVhY2h8ZW58MHx8MHx8fDA%3D"/>
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                                BUDGET:PHP 10,000-15,000
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            <li>
+                <div class="img-card iCard-style1">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <span class="card-title">Cannon Beach,Portland</span>
+                            <img src="https://i.redd.it/l6fprj54ioa21.jpg" />
+                        </div>
+                        
+                        <div class="card-text">
+                            <p>
+                               BUDGET: $145 to $867 
+                            </p>
+                        </div>    
+                </div>                    
+            </li>
+            
+            
+        </ul>
+
+    </div>
+    
+    <br/>
+    <a href="./COASTAL.html" class="btn" style="color:black;margin-left: 48%;margin-bottom: 30px;background-color: rgb(129, 129, 164); padding: 10px;border-radius: 30px;">BACK</a>
+</body>
+<script>
+    function showText(toggleText) {
+    toggleText.classList.toggle("active");
+}
+</script>
+</html>
